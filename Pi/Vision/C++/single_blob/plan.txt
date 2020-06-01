@@ -1,0 +1,5 @@
+single_blob -> save circled image, write coordinates to a csv file
+double_blob -> saved circled image, write coordinates + laser color to a csv file
+
+
+screenCapture -> two threads, one thread loads the camera and waits for a snap command, the other thread moves the motors and interacts with the previous thread to get image and does image processing to determine the coordinate

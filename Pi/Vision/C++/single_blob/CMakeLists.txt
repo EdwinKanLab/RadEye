@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project( SingleBlob )
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( single_blob single_blob.cpp )
+target_link_libraries( single_blob ${OpenCV_LIBS} )

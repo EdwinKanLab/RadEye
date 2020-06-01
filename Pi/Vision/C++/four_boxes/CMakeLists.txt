@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project( FourBoxes )
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( four_boxes four_boxes.cpp )
+target_link_libraries( four_boxes ${OpenCV_LIBS} )

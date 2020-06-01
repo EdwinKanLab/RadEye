@@ -1,0 +1,33 @@
+Name:                         Tic T249 Stepper Motor Controller
+Serial number:                00295780
+Firmware version:             1.06
+Last reset:                   Brown-out reset
+Up time:                      4:20:30
+
+Encoder position:             0
+Input state:                  Position
+Input after averaging:        N/A
+Input after hysteresis:       N/A
+Input before scaling:         N/A
+Input after scaling:          0
+Forward limit active:         No
+Reverse limit active:         No
+
+VIN voltage:                  11.7 V
+Operation state:              Soft error
+Energized:                    Yes
+Homing active:                No
+Last motor driver error:      None
+
+Target velocity:              0
+Current position:             123
+Position uncertain:           Yes
+Current velocity:             0
+
+Errors currently stopping the motor:
+  - Command timeout
+  - Safe start violation
+Errors that occurred since last check:
+  - Intentionally de-energized
+  - Command timeout
+  - Safe start violation
