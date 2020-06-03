@@ -64,7 +64,7 @@ int main()
                 clientResp = "4exit";
             }
             else{
-                cout<< "Invalid command received";
+                cout<< "Invalid command received\n";
                 clientResp = "7invalid";
             }
             cout << command << endl;
