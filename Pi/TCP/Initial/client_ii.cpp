@@ -35,7 +35,7 @@ int main()
     {
         return 1;
     }
-
+    cout <<"Connection successful." << endl;
     //	While loop:
     char buf[128];
     
