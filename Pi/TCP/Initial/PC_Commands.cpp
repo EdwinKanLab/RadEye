@@ -22,13 +22,13 @@ using namespace std;
 string getCoordinate(){
     // vector<vector<float>> coord;
     // coord = IP.getCoordinate();
-    return "done";
+    return "4done";
 }
 
 string gotoCenter(){
-    return "done";
+    return "4done";
 }
 
 string step(string command){
-    return "done";
+    return "4done";
 }

@@ -21,8 +21,8 @@ int main()
     }
 
     //	Create a hint structure for the server we're connecting with
-    int port = 7778;
-    string ipAddress = "10.148.3.11";
+    int port = 7777;
+    string ipAddress = "10.148.3.125";
 
     sockaddr_in hint;
     hint.sin_family = AF_INET;
@@ -61,11 +61,11 @@ int main()
 
             else if (command.compare("exit")==0){
                 exit = true;
-                clientResp = "exit";
+                clientResp = "4exit";
             }
             else{
                 cout<< "Invalid command received";
-                clientResp = "invalid";
+                clientResp = "7invalid";
             }
         }
         
