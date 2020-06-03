@@ -64,9 +64,10 @@ int main()
                 clientResp = "4exit";
             }
             else{
-                cout<< "Invalid command received";
+                // cout<< "Invalid command received";
                 clientResp = "7invalid";
             }
+            cout << command << endl;
         }
         
         int sendRes = send(sock, clientResp.c_str(), clientResp.size() + 1, 0);
