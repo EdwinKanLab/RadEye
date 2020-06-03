@@ -263,7 +263,7 @@ TicDriver* createTicDriver(const char* serial_no, uint32_t max_speed,
 }
 
 TicDriver* copyTicDriver(TicDriver const* in){
-	TicDriver* out = malloc(sizeof(TicDriver));
+	TicDriver* out = (TicDriver*) malloc(sizeof(TicDriver));
 	*out = *in;
 	return out;
 }
