@@ -61,11 +61,11 @@ int main()
 
             else if (command.compare("exit")==0){
                 exit = true;
-                clientResp = "4exit";
+                clientResp = "04exit";
             }
             else{
                 cout<< "Invalid command received\n";
-                clientResp = "7invalid";
+                clientResp = "07invalid";
             }
             cout << command << endl;
         }
