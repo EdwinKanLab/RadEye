@@ -22,7 +22,7 @@ using namespace std;
 string getCoordinate(){
     // vector<vector<float>> coord;
     // coord = IP.getCoordinate();
-    return "04done";
+    return "1912.34567 89.0123456 0 0";
 }
 
 string gotoCenter(){

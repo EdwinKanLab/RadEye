@@ -10,10 +10,11 @@
 
 #include <vector>
 using namespace std;
-// using namespace cv;
+using namespace cv;
 class ImageProcessor{
 private:
-    vector<float> topl_crop(2,0);
+    float topl_crop[2];
+    float botr_crop[2];
 public:
     vector<vector<float>> getCoordinate();
 };
