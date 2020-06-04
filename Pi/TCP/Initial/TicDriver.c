@@ -250,7 +250,11 @@ TicDriver* createTicDriver(const char* serial_no, uint32_t max_speed,
 						};
 
 	snprintf(driver->serial_no, sizeof(driver->serial_no), serial_no);
-	//driver->deenergize(driver);
+	
+	///////////////////////////
+	driver->deenergize(driver);
+	///////////////////////////
+	
 	driver->setMaxSpeed(driver,max_speed);
 	driver->setStartingSpeed(driver,starting_speed);
 	driver->setMaxDecel(driver, max_decel);
