@@ -11,7 +11,7 @@ int main ( int argc,char **argv ) {
     int nCount=100;
     cv::Mat image[nCount];
     //set camera params
-    Camera.set( CAP_PROP_FORMAT, CV_8UC1 );
+    Camera.set( CAP_PROP_FORMAT, CV_32FC3 );
     //Open camera
     cout<<"Opening Camera..."<<endl;
     if (!Camera.open()) {cerr<<"Error opening the camera"<<endl;return -1;}
