@@ -31,7 +31,7 @@ int main ( int argc,char **argv ) {
     cout<< secondsElapsed<<" seconds for "<< nCount<<"  frames : FPS = "<<  ( float ) ( ( float ) ( nCount ) /secondsElapsed ) <<endl;
     //save image
     for (int i = 0; i < nCount; i++){
-        cv::imwrite("images/raspicam_cv_image_" + to_string(i) ".jpg",image[i]);
+        cv::imwrite("images/raspicam_cv_image_" + to_string(i) + ".jpg",image[i]);
     }
     cout<<"All images saved at raspicam_cv_image.jpg"<<endl;
 }
