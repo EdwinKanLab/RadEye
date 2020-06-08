@@ -69,7 +69,7 @@ const vector<string> explode(const string& s, const char& c)
 string getCoordinate(){
     // vector<vector<float>> coord;
     // coord = IP.getCoordinate();
-    return "2312.34567 89.0123456 0 0";
+    return "23000.0 000.0 000.0 000.0";
 }
 
 string gotoCenter(){
