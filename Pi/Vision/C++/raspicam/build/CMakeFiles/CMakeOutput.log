@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/3.13.4/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/3.13.4/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
@@ -23,33 +23,33 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/3.13.4/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/3.13.4/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp
+Change Dir: /home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ef488/fast"
-/usr/bin/make -f CMakeFiles/cmTC_ef488.dir/build.make CMakeFiles/cmTC_ef488.dir/build
-make[1]: Entering directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ef488.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_ef488.dir/testCCompiler.c.o   -c /home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_ef488
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ef488.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_ef488.dir/testCCompiler.c.o  -o cmTC_ef488 
-make[1]: Leaving directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_0be48/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0be48.dir/build.make CMakeFiles/cmTC_0be48.dir/build
+make[1]: Entering directory '/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0be48.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_0be48.dir/testCCompiler.c.o   -c /home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_0be48
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0be48.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_0be48.dir/testCCompiler.c.o  -o cmTC_0be48 
+make[1]: Leaving directory '/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp
+Change Dir: /home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_60450/fast"
-/usr/bin/make -f CMakeFiles/cmTC_60450.dir/build.make CMakeFiles/cmTC_60450.dir/build
-make[1]: Entering directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_60450.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_60450.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.13/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_60450
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_60450.dir/link.txt --verbose=1
-/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_60450.dir/CMakeCCompilerABI.c.o  -o cmTC_60450 
+Run Build Command:"/usr/bin/make" "cmTC_87aa5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_87aa5.dir/build.make CMakeFiles/cmTC_87aa5.dir/build
+make[1]: Entering directory '/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_87aa5.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_87aa5.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.13/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_87aa5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_87aa5.dir/link.txt --verbose=1
+/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_87aa5.dir/CMakeCCompilerABI.c.o  -o cmTC_87aa5 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper
@@ -59,24 +59,24 @@ Thread model: posix
 gcc version 8.3.0 (Raspbian 8.3.0-6+rpi1) 
 COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/
 LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_60450'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
- /usr/lib/gcc/arm-linux-gnueabihf/8/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccjPUjDd.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu -m armelf_linux_eabi -o cmTC_60450 /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/8/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/8 -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_60450.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/arm-linux-gnueabihf/8/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_60450'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
-make[1]: Leaving directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_87aa5'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
+ /usr/lib/gcc/arm-linux-gnueabihf/8/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccMNImTf.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu -m armelf_linux_eabi -o cmTC_87aa5 /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/8/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/8 -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_87aa5.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/arm-linux-gnueabihf/8/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_87aa5'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
+make[1]: Leaving directory '/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_60450/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_60450.dir/build.make CMakeFiles/cmTC_60450.dir/build]
-  ignore line: [make[1]: Entering directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_60450.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_60450.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.13/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_60450]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_60450.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_60450.dir/CMakeCCompilerABI.c.o  -o cmTC_60450 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_87aa5/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_87aa5.dir/build.make CMakeFiles/cmTC_87aa5.dir/build]
+  ignore line: [make[1]: Entering directory '/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_87aa5.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_87aa5.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.13/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_87aa5]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_87aa5.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_87aa5.dir/CMakeCCompilerABI.c.o  -o cmTC_87aa5 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper]
@@ -86,13 +86,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 8.3.0 (Raspbian 8.3.0-6+rpi1) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_60450'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
-  link line: [ /usr/lib/gcc/arm-linux-gnueabihf/8/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccjPUjDd.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu -m armelf_linux_eabi -o cmTC_60450 /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/8/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/8 -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_60450.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/arm-linux-gnueabihf/8/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_87aa5'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
+  link line: [ /usr/lib/gcc/arm-linux-gnueabihf/8/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccMNImTf.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu -m armelf_linux_eabi -o cmTC_87aa5 /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/8/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/8 -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_87aa5.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/arm-linux-gnueabihf/8/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o]
     arg [/usr/lib/gcc/arm-linux-gnueabihf/8/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/arm-linux-gnueabihf/8/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccjPUjDd.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccMNImTf.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -108,7 +108,7 @@ Parsed C implicit link information from above output:
     arg [-m] ==> ignore
     arg [armelf_linux_eabi] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_60450] ==> ignore
+    arg [cmTC_87aa5] ==> ignore
     arg [/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o] ==> ignore
     arg [/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o] ==> ignore
     arg [/usr/lib/gcc/arm-linux-gnueabihf/8/crtbegin.o] ==> ignore
@@ -117,7 +117,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/gcc/arm-linux-gnueabihf/8/../../..] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/8/../../..]
     arg [-L/lib/arm-linux-gnueabihf] ==> dir [/lib/arm-linux-gnueabihf]
     arg [-L/usr/lib/arm-linux-gnueabihf] ==> dir [/usr/lib/arm-linux-gnueabihf]
-    arg [CMakeFiles/cmTC_60450.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_87aa5.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -144,17 +144,17 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp
+Change Dir: /home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_82128/fast"
-/usr/bin/make -f CMakeFiles/cmTC_82128.dir/build.make CMakeFiles/cmTC_82128.dir/build
-make[1]: Entering directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_82128.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_82128.dir/feature_tests.c.o   -c /home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_82128
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_82128.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_82128.dir/feature_tests.c.o  -o cmTC_82128 
-make[1]: Leaving directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_f5f1c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f5f1c.dir/build.make CMakeFiles/cmTC_f5f1c.dir/build
+make[1]: Entering directory '/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f5f1c.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_f5f1c.dir/feature_tests.c.o   -c /home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_f5f1c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f5f1c.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_f5f1c.dir/feature_tests.c.o  -o cmTC_f5f1c 
+make[1]: Leaving directory '/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -164,17 +164,17 @@ make[1]: Leaving directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/ra
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp
+Change Dir: /home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b896b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b896b.dir/build.make CMakeFiles/cmTC_b896b.dir/build
-make[1]: Entering directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b896b.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_b896b.dir/feature_tests.c.o   -c /home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_b896b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b896b.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_b896b.dir/feature_tests.c.o  -o cmTC_b896b 
-make[1]: Leaving directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_29c32/fast"
+/usr/bin/make -f CMakeFiles/cmTC_29c32.dir/build.make CMakeFiles/cmTC_29c32.dir/build
+make[1]: Entering directory '/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_29c32.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_29c32.dir/feature_tests.c.o   -c /home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_29c32
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_29c32.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_29c32.dir/feature_tests.c.o  -o cmTC_29c32 
+make[1]: Leaving directory '/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -184,17 +184,17 @@ make[1]: Leaving directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/ra
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp
+Change Dir: /home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b2c91/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b2c91.dir/build.make CMakeFiles/cmTC_b2c91.dir/build
-make[1]: Entering directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b2c91.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_b2c91.dir/feature_tests.c.o   -c /home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_b2c91
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b2c91.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_b2c91.dir/feature_tests.c.o  -o cmTC_b2c91 
-make[1]: Leaving directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_af689/fast"
+/usr/bin/make -f CMakeFiles/cmTC_af689.dir/build.make CMakeFiles/cmTC_af689.dir/build
+make[1]: Entering directory '/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_af689.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_af689.dir/feature_tests.c.o   -c /home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_af689
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_af689.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_af689.dir/feature_tests.c.o  -o cmTC_af689 
+make[1]: Leaving directory '/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -202,30 +202,30 @@ make[1]: Leaving directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/ra
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp
+Change Dir: /home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_714cf/fast"
-/usr/bin/make -f CMakeFiles/cmTC_714cf.dir/build.make CMakeFiles/cmTC_714cf.dir/build
-make[1]: Entering directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_714cf.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_714cf.dir/testCXXCompiler.cxx.o -c /home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_714cf
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_714cf.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_714cf.dir/testCXXCompiler.cxx.o  -o cmTC_714cf 
-make[1]: Leaving directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_ad1e2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ad1e2.dir/build.make CMakeFiles/cmTC_ad1e2.dir/build
+make[1]: Entering directory '/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ad1e2.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_ad1e2.dir/testCXXCompiler.cxx.o -c /home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_ad1e2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad1e2.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_ad1e2.dir/testCXXCompiler.cxx.o  -o cmTC_ad1e2 
+make[1]: Leaving directory '/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp
+Change Dir: /home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f3f4f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f3f4f.dir/build.make CMakeFiles/cmTC_f3f4f.dir/build
-make[1]: Entering directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f3f4f.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_f3f4f.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_f3f4f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f3f4f.dir/link.txt --verbose=1
-/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_f3f4f.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_f3f4f 
+Run Build Command:"/usr/bin/make" "cmTC_26802/fast"
+/usr/bin/make -f CMakeFiles/cmTC_26802.dir/build.make CMakeFiles/cmTC_26802.dir/build
+make[1]: Entering directory '/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_26802.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_26802.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_26802
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_26802.dir/link.txt --verbose=1
+/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_26802.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_26802 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper
@@ -235,24 +235,24 @@ Thread model: posix
 gcc version 8.3.0 (Raspbian 8.3.0-6+rpi1) 
 COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/
 LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f3f4f' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
- /usr/lib/gcc/arm-linux-gnueabihf/8/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccjRc8Mz.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu -m armelf_linux_eabi -o cmTC_f3f4f /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/8/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/8 -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_f3f4f.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/arm-linux-gnueabihf/8/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f3f4f' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
-make[1]: Leaving directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_26802' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
+ /usr/lib/gcc/arm-linux-gnueabihf/8/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccYH5JGr.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu -m armelf_linux_eabi -o cmTC_26802 /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/8/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/8 -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_26802.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/arm-linux-gnueabihf/8/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_26802' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp'
+make[1]: Leaving directory '/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_f3f4f/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_f3f4f.dir/build.make CMakeFiles/cmTC_f3f4f.dir/build]
-  ignore line: [make[1]: Entering directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_f3f4f.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_f3f4f.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_f3f4f]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f3f4f.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_f3f4f.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_f3f4f ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_26802/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_26802.dir/build.make CMakeFiles/cmTC_26802.dir/build]
+  ignore line: [make[1]: Entering directory '/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_26802.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_26802.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.13/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_26802]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_26802.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_26802.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_26802 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper]
@@ -262,13 +262,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 8.3.0 (Raspbian 8.3.0-6+rpi1) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/8/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/8/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_f3f4f' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
-  link line: [ /usr/lib/gcc/arm-linux-gnueabihf/8/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccjRc8Mz.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu -m armelf_linux_eabi -o cmTC_f3f4f /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/8/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/8 -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_f3f4f.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/arm-linux-gnueabihf/8/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_26802' '-shared-libgcc'  '-mfloat-abi=hard' '-mfpu=vfp' '-mtls-dialect=gnu' '-marm' '-march=armv6+fp']
+  link line: [ /usr/lib/gcc/arm-linux-gnueabihf/8/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/8/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccYH5JGr.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu -m armelf_linux_eabi -o cmTC_26802 /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/8/crtbegin.o -L/usr/lib/gcc/arm-linux-gnueabihf/8 -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/8/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_26802.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/arm-linux-gnueabihf/8/crtend.o /usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crtn.o]
     arg [/usr/lib/gcc/arm-linux-gnueabihf/8/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/arm-linux-gnueabihf/8/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/8/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccjRc8Mz.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccYH5JGr.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -284,7 +284,7 @@ Parsed CXX implicit link information from above output:
     arg [-m] ==> ignore
     arg [armelf_linux_eabi] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_f3f4f] ==> ignore
+    arg [cmTC_26802] ==> ignore
     arg [/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crt1.o] ==> ignore
     arg [/usr/lib/gcc/arm-linux-gnueabihf/8/../../../arm-linux-gnueabihf/crti.o] ==> ignore
     arg [/usr/lib/gcc/arm-linux-gnueabihf/8/crtbegin.o] ==> ignore
@@ -293,7 +293,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/gcc/arm-linux-gnueabihf/8/../../..] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/8/../../..]
     arg [-L/lib/arm-linux-gnueabihf] ==> dir [/lib/arm-linux-gnueabihf]
     arg [-L/usr/lib/arm-linux-gnueabihf] ==> dir [/usr/lib/arm-linux-gnueabihf]
-    arg [CMakeFiles/cmTC_f3f4f.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_26802.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -316,17 +316,17 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++2a] compiler features compiled with the following output:
-Change Dir: /home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp
+Change Dir: /home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_fdfb8/fast"
-/usr/bin/make -f CMakeFiles/cmTC_fdfb8.dir/build.make CMakeFiles/cmTC_fdfb8.dir/build
-make[1]: Entering directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_fdfb8.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++2a -o CMakeFiles/cmTC_fdfb8.dir/feature_tests.cxx.o -c /home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_fdfb8
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fdfb8.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_fdfb8.dir/feature_tests.cxx.o  -o cmTC_fdfb8 
-make[1]: Leaving directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_75849/fast"
+/usr/bin/make -f CMakeFiles/cmTC_75849.dir/build.make CMakeFiles/cmTC_75849.dir/build
+make[1]: Entering directory '/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_75849.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++2a -o CMakeFiles/cmTC_75849.dir/feature_tests.cxx.o -c /home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_75849
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_75849.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_75849.dir/feature_tests.cxx.o  -o cmTC_75849 
+make[1]: Leaving directory '/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -389,17 +389,17 @@ make[1]: Leaving directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/ra
 
 
 Detecting CXX [-std=c++17] compiler features compiled with the following output:
-Change Dir: /home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp
+Change Dir: /home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_3c233/fast"
-/usr/bin/make -f CMakeFiles/cmTC_3c233.dir/build.make CMakeFiles/cmTC_3c233.dir/build
-make[1]: Entering directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_3c233.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++17 -o CMakeFiles/cmTC_3c233.dir/feature_tests.cxx.o -c /home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_3c233
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3c233.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_3c233.dir/feature_tests.cxx.o  -o cmTC_3c233 
-make[1]: Leaving directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_30d8c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_30d8c.dir/build.make CMakeFiles/cmTC_30d8c.dir/build
+make[1]: Entering directory '/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_30d8c.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++17 -o CMakeFiles/cmTC_30d8c.dir/feature_tests.cxx.o -c /home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_30d8c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_30d8c.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_30d8c.dir/feature_tests.cxx.o  -o cmTC_30d8c 
+make[1]: Leaving directory '/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -462,17 +462,17 @@ make[1]: Leaving directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/ra
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp
+Change Dir: /home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f825e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f825e.dir/build.make CMakeFiles/cmTC_f825e.dir/build
-make[1]: Entering directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f825e.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_f825e.dir/feature_tests.cxx.o -c /home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_f825e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f825e.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_f825e.dir/feature_tests.cxx.o  -o cmTC_f825e 
-make[1]: Leaving directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_b1dbb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b1dbb.dir/build.make CMakeFiles/cmTC_b1dbb.dir/build
+make[1]: Entering directory '/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b1dbb.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_b1dbb.dir/feature_tests.cxx.o -c /home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_b1dbb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b1dbb.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_b1dbb.dir/feature_tests.cxx.o  -o cmTC_b1dbb 
+make[1]: Leaving directory '/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -535,17 +535,17 @@ make[1]: Leaving directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/ra
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp
+Change Dir: /home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5ec21/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5ec21.dir/build.make CMakeFiles/cmTC_5ec21.dir/build
-make[1]: Entering directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_5ec21.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_5ec21.dir/feature_tests.cxx.o -c /home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_5ec21
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ec21.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_5ec21.dir/feature_tests.cxx.o  -o cmTC_5ec21 
-make[1]: Leaving directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_08e48/fast"
+/usr/bin/make -f CMakeFiles/cmTC_08e48.dir/build.make CMakeFiles/cmTC_08e48.dir/build
+make[1]: Entering directory '/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_08e48.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_08e48.dir/feature_tests.cxx.o -c /home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_08e48
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_08e48.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_08e48.dir/feature_tests.cxx.o  -o cmTC_08e48 
+make[1]: Leaving directory '/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -608,17 +608,17 @@ make[1]: Leaving directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/ra
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp
+Change Dir: /home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_312e1/fast"
-/usr/bin/make -f CMakeFiles/cmTC_312e1.dir/build.make CMakeFiles/cmTC_312e1.dir/build
-make[1]: Entering directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_312e1.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_312e1.dir/feature_tests.cxx.o -c /home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_312e1
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_312e1.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_312e1.dir/feature_tests.cxx.o  -o cmTC_312e1 
-make[1]: Leaving directory '/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_aec0f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_aec0f.dir/build.make CMakeFiles/cmTC_aec0f.dir/build
+make[1]: Entering directory '/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_aec0f.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_aec0f.dir/feature_tests.cxx.o -c /home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_aec0f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aec0f.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_aec0f.dir/feature_tests.cxx.o  -o cmTC_aec0f 
+make[1]: Leaving directory '/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers

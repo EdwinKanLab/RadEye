@@ -1,4 +1,4 @@
-# Install script for directory: /home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam
+# Install script for directory: /home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/pi/Code/SFML/RadEye-Pi/RadEye-Pi/Vision/C++/raspicam/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/pi/Code/Github/RadEye/Pi/Vision/C++/raspicam/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
