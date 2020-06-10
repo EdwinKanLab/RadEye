@@ -1,5 +1,5 @@
 /*
- *PC_commands.c
+ *PC_commands.cpp
  *
  * Created: 03-Jun-20
  * Last Modified: 04-Jun-2020
@@ -28,10 +28,11 @@
 #include <unistd.h>
 #include <vector>
 #include <iostream>
+
 #include <raspicam/raspicam_cv.h>
 
 using namespace std;
-
+using namespace cv;
 
 // ImageProcessor IP;
 
