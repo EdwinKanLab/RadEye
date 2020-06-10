@@ -65,7 +65,6 @@ int main()
 
             else if (command.compare("exit")==0){
                 exit = true;
-                run_exit();
                 clientResp = "04exit";
             }
             else{
@@ -80,6 +79,7 @@ int main()
             cout << "Could not send to PC!\n";
         }
     }
+    run_exit();
     
     //	Close the socket
     close(sock);
