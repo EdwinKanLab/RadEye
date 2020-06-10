@@ -28,7 +28,7 @@
 #include <unistd.h>
 #include <vector>
 #include <iostream>
-#include <stdint.h>
+#include <cstdint>
 
 #include <raspicam/raspicam_cv.h>
 
