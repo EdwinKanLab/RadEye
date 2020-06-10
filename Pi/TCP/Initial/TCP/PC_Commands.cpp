@@ -240,7 +240,7 @@ void run_exit(){
     cout << "Stopping the camera." << endl;
     Camera.release();
 
-    horizontal_1->deenergize(horizontal_1)
+    horizontal_1->deenergize(horizontal_1);
 
     horizontal_2->deenergize(horizontal_2);
 
