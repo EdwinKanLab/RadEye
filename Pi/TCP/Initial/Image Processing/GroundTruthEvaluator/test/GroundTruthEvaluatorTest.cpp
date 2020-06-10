@@ -121,27 +121,33 @@ int main(){
 
     ///////////////////////////////////////////////////////////////////////////
     Mat image;
-    for (int i = 0; i < 100; i++){
-        cout << "Reading image # " << i << endl;
-        image = imread("../100images/raspicam_cv_image_"+
-        to_string(i)+".jpg", IMREAD_COLOR);
+    image = imread("../100images/raspicam_cv_image_"+
+        to_string(0)+".jpg", IMREAD_COLOR);
+    
+    cout << "Read image 0" << endl;
 
-        if(!(image.data)){
-            cout <<  "Could not open or find one or more images" << endl ;
-            return -1;
-        }
 
-        start = chrono::high_resolution_clock::now();
+    // for (int i = 0; i < 100; i++){
+    //     cout << "Reading image # " << i << endl;
+    //     image = imread("../100images/raspicam_cv_image_"+
+    //     to_string(i)+".jpg", IMREAD_COLOR);
 
-        groundTruthEvaluator.setInputImage(image);
-        groundTruthEvaluator.doTheJob();
+    //     if(!(image.data)){
+    //         cout <<  "Could not open or find one or more images" << endl ;
+    //         return -1;
+    //     }
 
-        stop = chrono::high_resolution_clock::now();
-        duration = chrono::duration_cast<chrono::microseconds>(stop - start);
-        total += duration.count();
-    }
+    //     start = chrono::high_resolution_clock::now();
 
-    cout << "Total time for 100 images: " << total << endl;
+    //     groundTruthEvaluator.setInputImage(image);
+    //     groundTruthEvaluator.doTheJob();
+
+    //     stop = chrono::high_resolution_clock::now();
+    //     duration = chrono::duration_cast<chrono::microseconds>(stop - start);
+    //     total += duration.count();
+    // }
+
+    // cout << "Total time for 100 images: " << total << endl;
     cout << "Finished Test" << endl;
     cout << "Check Results directory for the image files" << endl;
 
