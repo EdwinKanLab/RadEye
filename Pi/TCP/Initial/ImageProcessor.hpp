@@ -13,8 +13,15 @@ using namespace std;
 using namespace cv;
 class ImageProcessor{
 private:
+    Mat img;
     float topl_crop[2];
     float botr_crop[2];
+    Cropper cropper;
+
 public:
+    void crop(){
+        this->cropper.doTheJob();
+        
+    }
     vector<vector<float>> getCoordinate();
 };
