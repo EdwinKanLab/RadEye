@@ -28,6 +28,7 @@
 #include <unistd.h>
 #include <vector>
 #include <iostream>
+#include <stdint.h>
 
 #include <raspicam/raspicam_cv.h>
 
@@ -167,7 +168,6 @@ max_decel, max_accel, step_mode, current_limit, curr_pos);
 
 TicDriver* horizontal_2 = createTicDriver(horizontal_2_sno, max_speed, starting_speed,
 max_decel, max_accel, step_mode, current_limit, curr_pos);
-
 
 Mat image;
 
