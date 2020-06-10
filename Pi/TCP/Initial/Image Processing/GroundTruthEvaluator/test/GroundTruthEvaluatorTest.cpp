@@ -141,10 +141,12 @@ int main(){
         start = chrono::high_resolution_clock::now();
         cout << "Started timing" << endl;
         groundTruthEvaluator.setInputImage(image);
+        cout << "Set input image" << endl;
         groundTruthEvaluator.doTheJob();
-
-        stop = chrono::high_resolution_clock::now();
         cout << "Evaluated Ground Truth" << endl;
+        
+        stop = chrono::high_resolution_clock::now();
+        
         duration = chrono::duration_cast<chrono::microseconds>(stop - start);
         total += duration.count();
     }
