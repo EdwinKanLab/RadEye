@@ -157,9 +157,9 @@ string getCoordinate(){
 
     string result ="23";
     for (int i = 0; i < 2; i++){
-        result += to_string(groundTruthEvaluator.getResult()[i].x.substr(0,5));
+        result += to_string(groundTruthEvaluator.getResult()[i].x).substr(0,5);
         result += " ";
-        result += to_string(groundTruthEvaluator.getResult()[i].y.substr(0,5));
+        result += to_string(groundTruthEvaluator.getResult()[i].y).substr(0,5));
         result += " ";
     }
     return result.substr(0,25);
