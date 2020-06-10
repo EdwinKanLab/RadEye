@@ -237,5 +237,14 @@ string step(string command){
 }
 
 void run_exit(){
+    cout << "Stopping the camera." << endl;
     Camera.release();
+
+    horizontal_1->deenergize(horizontal_1)
+
+    horizontal_2->deenergize(horizontal_2);
+
+    vertical_1->deenergize(vertical_1);
+
+    vertical_2->deenergize(vertical_2);
 }
