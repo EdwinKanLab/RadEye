@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8)
-project( BlobDetector )
+project( TCPI )
 find_package( OpenCV REQUIRED )
 include_directories( ${OpenCV_INCLUDE_DIRS} 
                      "GroundTruthEvaluator/include"
@@ -18,4 +18,4 @@ file(GLOB SOURCES "GroundTruthEvaluator/src/*.cpp"
 
 
 add_executable(tcp_pi client_ii.cpp ${SOURCES}  )
-target_link_libraries( GroundTruthEvaluatorTest ${OpenCV_LIBS} )
+target_link_libraries( tcp_pi ${OpenCV_LIBS} )
