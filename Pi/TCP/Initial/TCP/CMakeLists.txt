@@ -7,7 +7,7 @@ include_directories( ${OpenCV_INCLUDE_DIRS}
                      "CornerDetector/include"
                      "Warper/include"
                      "BlobDetector/include"
-                     ".")
+                     )
 file(GLOB SOURCES "GroundTruthEvaluator/src/*.cpp"
                   "Cropper/src/*.cpp"
                   "CornerDetector/src/*.cpp"
