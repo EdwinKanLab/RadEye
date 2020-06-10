@@ -73,11 +73,11 @@ int main(){
 
     ///////////////////////////////////////////////////////////////////////////
     
-    Cropper initialDiscard(0.15, 0.98, 0.10, 0.98);
+    Cropper initialDiscard(0.18, 0.98, 0.12, 0.97);
     Cropper topLeftRegion(0, 0.10, 0.0, 0.10);
     Cropper topRightRegion(0.05, 0.15, 0.85, 1);
-    Cropper bottomLeftRegion(0.85, 0.95, 0, 0.15);
-    Cropper bottomRightRegion(0.85, 1, 0.85, 1);
+    Cropper bottomLeftRegion(0.85, 0.98, 0, 0.15);
+    Cropper bottomRightRegion(0.85, 1, 0.85, 0.99);
 
     ///////////////////////////////////////////////////////////////////////////
     
