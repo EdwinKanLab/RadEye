@@ -107,6 +107,19 @@ int main(){
     }
 
     ///////////////////////////////////////////////////////////////////////////
+    images[0].release();
+    images[1].release();
+    images[2].release();
+    images[3].release();
+    images[4].release();
+    image1.release();
+    image2.release();
+    image3.release();
+    image4.release();
+    image5.release();
+
+
+    ///////////////////////////////////////////////////////////////////////////
     Mat image;
     for (int i = 0; i < 100; i++){
         cout << "Reading image # " << i << endl;
