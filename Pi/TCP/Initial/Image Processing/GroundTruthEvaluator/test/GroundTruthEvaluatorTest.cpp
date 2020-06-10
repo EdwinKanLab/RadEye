@@ -139,7 +139,7 @@ int main(){
         cout << "Finished reading" << endl;
 
         start = chrono::high_resolution_clock::now();
-
+        cout << "Started timing" << endl;
         groundTruthEvaluator.setInputImage(image);
         groundTruthEvaluator.doTheJob();
 
