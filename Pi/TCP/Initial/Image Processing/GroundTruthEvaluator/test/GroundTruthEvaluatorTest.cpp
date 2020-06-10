@@ -109,6 +109,7 @@ int main(){
     ///////////////////////////////////////////////////////////////////////////
     Mat image;
     for (int i = 0; i < 100; i++){
+        cout << "Reading image # " << i << endl;
         image = imread("../100images/raspicam_cv_image_"+
         to_string(i)+".jpg", IMREAD_COLOR);
 
