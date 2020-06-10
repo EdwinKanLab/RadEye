@@ -17,7 +17,7 @@ file(GLOB SOURCES "GroundTruthEvaluator/src/*.cpp"
                   "Warper/src/*.cpp"
                   "BlobDetector/src/*.cpp"
                   "PC_Commands.cpp"
-                  "Tic/Tic.c")
+                  "Tic/TicDriver.c")
 
 
 add_executable(tcp_pi client_ii.cpp ${SOURCES}  )
