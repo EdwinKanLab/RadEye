@@ -19,6 +19,8 @@ file(GLOB SOURCES "GroundTruthEvaluator/src/*.cpp"
                   "PC_Commands.cpp"
                   "Tic/TicDriver.c")
 
+set_source_files_properties(Tic/TicDriver.c PROPERTIES LANGUAGE CXX )
+
 
 add_executable(tcp_pi client_ii.cpp ${SOURCES}  )
 target_link_libraries( tcp_pi ${OpenCV_LIBS} ${raspicam_CV_LIBS})
