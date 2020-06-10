@@ -107,6 +107,9 @@ raspicam::RaspiCam_Cv Camera;
 //////////////////////////////////////////////////////////////////////////
 
 void setup(){
+    if (Camera.isOpened()){
+        Camera.release();
+    }
     screenWidthMM = 267;
     screenHeightMM = 180.5;
     blobDetector.setThresholdParams(200, 255, 10);
