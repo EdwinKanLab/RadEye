@@ -27,6 +27,7 @@
 #include <math.h>
 #include <unistd.h>
 #include <vector>
+#include <iostream>
 #include <raspicam/raspicam_cv.h>
 
 using namespace std;
@@ -90,7 +91,7 @@ void setup(){
 
     ///////////////////////////////////////////////////////////////////////////
     Camera.set( CAP_PROP_FORMAT, CV_32FC3 );
-    if (!Camera.open()) {cerr<<"Error opening the camera"<<endl;
+    if (!Camera.open()) {cerr<<"Error opening the camera"<<endl;}
 }
 
 ///////////////////////////////////////////////////////////////////////////////
