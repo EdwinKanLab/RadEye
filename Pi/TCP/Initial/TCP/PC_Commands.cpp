@@ -22,7 +22,7 @@
 #include <opencv2/imgcodecs.hpp>
 
 #include "PC_Commands.hpp"
-#include "TicDriver.h"
+#include "Tic/TicDriver.h"
 #include <string>
 #include <math.h>
 #include <unistd.h>

@@ -9,7 +9,7 @@ include_directories( ${OpenCV_INCLUDE_DIRS}
                      "CornerDetector/include"
                      "Warper/include"
                      "BlobDetector/include"
-                     "."
+                     "Tic"
                      )
 file(GLOB SOURCES "GroundTruthEvaluator/src/*.cpp"
                   "Cropper/src/*.cpp"
@@ -17,7 +17,7 @@ file(GLOB SOURCES "GroundTruthEvaluator/src/*.cpp"
                   "Warper/src/*.cpp"
                   "BlobDetector/src/*.cpp"
                   "PC_Commands.cpp"
-                  "TicDriver.c")
+                  "Tic/Tic.c")
 
 
 add_executable(tcp_pi client_ii.cpp ${SOURCES}  )
