@@ -136,6 +136,7 @@ int main(){
             cout <<  "Could not open or find one or more images" << endl ;
             return -1;
         }
+        cout << "Finished reading" << endl;
 
         start = chrono::high_resolution_clock::now();
 
@@ -143,6 +144,7 @@ int main(){
         groundTruthEvaluator.doTheJob();
 
         stop = chrono::high_resolution_clock::now();
+        cout << "Evaluated Ground Truth" << endl;
         duration = chrono::duration_cast<chrono::microseconds>(stop - start);
         total += duration.count();
     }
