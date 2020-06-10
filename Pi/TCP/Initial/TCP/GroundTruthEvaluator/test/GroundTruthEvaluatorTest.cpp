@@ -1,4 +1,4 @@
-#include "../../BlobDetector/include/BlobDetector.hpp"
+#include "../include/BlobDetector.hpp"
 
 #include "../../Cropper/include/Cropper.hpp"
 

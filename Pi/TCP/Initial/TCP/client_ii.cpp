@@ -14,6 +14,7 @@ using namespace std;
 int main()
 {
     //	Create a socket
+    setup();
     int sock = socket(AF_INET, SOCK_STREAM, 0);
     if (sock == -1)
     {
@@ -61,6 +62,7 @@ int main()
 
             else if (command.compare("exit")==0){
                 exit = true;
+                run_exit();
                 clientResp = "04exit";
             }
             else{
