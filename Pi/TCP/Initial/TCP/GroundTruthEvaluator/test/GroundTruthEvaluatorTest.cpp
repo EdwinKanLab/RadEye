@@ -72,7 +72,7 @@ int main(){
 
     BlobDetector blobDetector;
     blobDetector.setThresholdParams(200, 255, 10);
-    blobDetector.setColorParams(true, 200);
+    blobDetector.setColorParams(false, 255);
     blobDetector.setAreaParams(false, 0, 2);
     blobDetector.setCircularityParams(false, 0, 1);
     blobDetector.setInertiaParams(true, 0.3, 1);
