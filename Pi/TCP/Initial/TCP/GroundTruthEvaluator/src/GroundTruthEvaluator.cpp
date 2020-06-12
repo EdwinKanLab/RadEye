@@ -158,6 +158,7 @@ void GroundTruthEvaluator::doTheJob(){
     cout << "Converting warped image to gray" << endl;
     Mat grayWarped;
     cvtColor(this->warper.getResult(), grayWarped, COLOR_BGR2GRAY);
+    imwrite("../warpedGray.jpg", grayWarped);
 
     cout << "Detecting blobs" << endl;
 
