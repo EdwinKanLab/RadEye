@@ -95,7 +95,7 @@ int main(){
     groundTruthEvaluator.setBlobDetector(blobDetector);
 
     ///////////////////////////////////////////////////////////////////////////
-    for (int i = 0; i < 5; i++){
+    for (int i = 1; i < 5; i++){
         groundTruthEvaluator.setInputImage(images[i]);
         groundTruthEvaluator.doTheJob();
         
