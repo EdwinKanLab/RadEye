@@ -126,23 +126,45 @@ Point2f GroundTruthEvaluator::getCorner(Cropper& region){
 
 void GroundTruthEvaluator::doTheJob(){
 
+    cout << "Applying croppers" << endl;
     this->applyCroppers();
     
+    cout << "Croppers applied" << endl;
 
+    cout << "Getting top left corner" << endl;
+    
     this->warper.setTopLeftSrcPoint(this->getCorner(this->topLeftRegion));
+    
+    cout << "Getting top right corner" << endl;
+    
     this->warper.setTopRightSrcPoint(this->getCorner(this->topRightRegion));
+    
+    cout << "Getting top bottom right corner" << endl;
+    
     this->warper.setBottomRightSrcPoint(this->getCorner(this->bottomRightRegion));
+
+    cout << "Getting bottom left corner" << endl;
+
     this->warper.setBottomLeftSrcPoint(this->getCorner(this->bottomLeftRegion));
 
-
+    cout << "Setting warper input image" << endl;
+    
     this->warper.setInputImage(this->initialDiscard.getResult());
+
+    cout << "warping the image" << endl;
+
     this->warper.doTheJob();
 
+    cout << "Converting warped image to gray" << endl;
     Mat grayWarped;
     cvtColor(this->warper.getResult(), grayWarped, COLOR_BGR2GRAY);
 
+    cout << "Detecting blobs" << endl;
+
     this->blobDetector.setInputImage(grayWarped);
     this->blobDetector.doTheJob();
+
+    cout << "Blobs detected" << endl;
 
     Point2f firstBlob = this->blobDetector.getResult()[0].pt;
     Point2f firstBlobMM(0,0);

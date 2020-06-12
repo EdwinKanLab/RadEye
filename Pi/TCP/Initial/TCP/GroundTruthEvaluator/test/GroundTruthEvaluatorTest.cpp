@@ -123,7 +123,7 @@ int main(){
     Mat image;
     image = imread("../100images/raspicam_cv_image_"+
         to_string(0)+".jpg", IMREAD_COLOR);
-    start = chrono::high_resolution_clock::now();
+    // start = chrono::high_resolution_clock::now();
     cout << "Started timing" << endl;
     groundTruthEvaluator.setInputImage(image);
     cout << "Set input image" << endl;

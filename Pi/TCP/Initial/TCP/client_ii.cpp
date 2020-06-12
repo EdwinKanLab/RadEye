@@ -70,6 +70,7 @@ int main()
             else{
                 cout<< "Invalid command received\n";
                 clientResp = "07invalid";
+                exit = true;
             }
             cout << command << endl;
         }
