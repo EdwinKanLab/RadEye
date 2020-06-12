@@ -62,7 +62,7 @@ int main(){
     ///////////////////////////////////////////////////////////////////////////
     
     CornerDetector singleCorner(1,0.1,100);
-    CornerDetector fourPlaneCorners(4, 0.1, 100);
+    // CornerDetector fourPlaneCorners(4, 0.1, 100);
     
     ///////////////////////////////////////////////////////////////////////////
 
@@ -72,7 +72,7 @@ int main(){
 
     BlobDetector blobDetector;
     blobDetector.setThresholdParams(200, 255, 10);
-    blobDetector.setColorParams(false, 255);
+    blobDetector.setColorParams(true, 255);
     blobDetector.setAreaParams(false, 0, 2);
     blobDetector.setCircularityParams(false, 0, 1);
     blobDetector.setInertiaParams(true, 0.3, 1);
