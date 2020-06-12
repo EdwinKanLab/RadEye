@@ -165,7 +165,7 @@ void GroundTruthEvaluator::doTheJob(){
     this->blobDetector.doTheJob();
 
     cout << "Blobs detected" << endl;
-
+    cout << "Number of blobs detected: " << this->blobDetector.getResult().size() << endl;
     Point2f firstBlob = this->blobDetector.getResult()[0].pt;
     Point2f firstBlobMM(0,0);
 
