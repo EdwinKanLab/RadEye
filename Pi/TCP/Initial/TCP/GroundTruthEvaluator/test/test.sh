@@ -7,4 +7,4 @@ cmake ..
 make
 ./GroundTruthEvaluatorTest
 cd ..
-rm -r test_build
+# rm -r test_build

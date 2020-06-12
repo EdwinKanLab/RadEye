@@ -126,6 +126,8 @@ int main(){
     // start = chrono::high_resolution_clock::now();
     cout << "Started timing" << endl;
     groundTruthEvaluator.setInputImage(image);
+    groundTruthEvaluator.saveInputImage("../100imagesResults/raspicam_cv_image_"+ 
+    to_string(0)+"_inputImage.jpg");
     cout << "Set input image" << endl;
     groundTruthEvaluator.doTheJob();
     cout << "Evaluated Ground Truth" << endl;
