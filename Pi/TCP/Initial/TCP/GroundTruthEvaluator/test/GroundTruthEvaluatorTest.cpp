@@ -75,7 +75,7 @@ int main(){
     blobDetector.setColorParams(true, 255);
     blobDetector.setAreaParams(false, 0, 2);
     blobDetector.setCircularityParams(false, 0, 1);
-    blobDetector.setInertiaParams(true, 0.3, 1);
+    blobDetector.setInertiaParams(true, 0.2, 1);
     blobDetector.setConvexityParams(false, 0.0, 1);
     blobDetector.setMinRepeatability(2);
     blobDetector.setMinDistBetweenBlobs(0);
