@@ -163,6 +163,7 @@ void GroundTruthEvaluator::doTheJob(){
     cout << "Detecting blobs" << endl;
 
     this->blobDetector.setInputImage(grayWarped);
+    blobDetector.saveInputImage("blobInput.jpg");
     this->blobDetector.doTheJob();
 
     cout << "Blobs detected" << endl;
