@@ -13,6 +13,6 @@ file(GLOB SOURCES "../src/*.cpp"
                   "../../Warper/src/*.cpp"
                   "../../BlobDetector/src/*.cpp")
 
-
+add_link_options("-lstdc++" "-lm")
 add_executable(GroundTruthEvaluatorTest GroundTruthEvaluatorTest.cpp ${SOURCES} )
 target_link_libraries( GroundTruthEvaluatorTest ${OpenCV_LIBS} )
