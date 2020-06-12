@@ -154,7 +154,7 @@ void GroundTruthEvaluator::doTheJob(){
     cout << "warping the image" << endl;
 
     this->warper.doTheJob();
-
+    this->warper.saveResultAsImage("../warpedImage.jpg");
     cout << "Converting warped image to gray" << endl;
     Mat grayWarped;
     cvtColor(this->warper.getResult(), grayWarped, COLOR_BGR2GRAY);
