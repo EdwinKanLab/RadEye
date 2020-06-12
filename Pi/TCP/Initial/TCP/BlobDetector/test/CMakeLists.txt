@@ -11,6 +11,6 @@ file(GLOB SOURCES "../src/*.cpp"
                   "../../CornerDetector/src/*.cpp"
                   "../../Warper/src/*.cpp")
 
-
+add_link_options("-lstdc++" "-lm")
 add_executable(BlobDetectorTest BlobDetectorTest.cpp ${SOURCES} )
 target_link_libraries( BlobDetectorTest ${OpenCV_LIBS} )
