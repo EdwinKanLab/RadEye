@@ -73,7 +73,10 @@ int main(){
     Mat image3 = imread("../TestImages/testImage3.jpg", IMREAD_COLOR);
     Mat image4 = imread("../TestImages/testImage4.jpg", IMREAD_COLOR);
     Mat image5 = imread("../TestImages/testImage5.jpg", IMREAD_COLOR);
-    if(!(image1.data && image2.data && image3.data && image4.data && image5.data))                              // Check for invalid input
+    
+    Mat image = imread("../TestImages/raspicam_cv_image_"+
+        to_string(0)+".jpg", IMREAD_COLOR);
+    if(!(image1.data && image2.data && image3.data && image4.data && image5.data && image.data))                              // Check for invalid input
     {
         cout <<  "Could not open or find one or more images" << std::endl ;
         return -1;
@@ -117,7 +120,7 @@ int main(){
     ///////////////////////////////////////////////////////////////////////////
 
 
-    initialDiscard.setInputImage(image1);
+    initialDiscard.setInputImage(image);
     initialDiscard.doTheJob();
 
     topLeftRegion.setInputImage(initialDiscard.getResult());
