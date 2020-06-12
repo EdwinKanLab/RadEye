@@ -155,14 +155,14 @@ void GroundTruthEvaluator::doTheJob(){
 
     this->warper.doTheJob();
     this->warper.saveResultAsImage("../warpedImage.jpg");
-    cout << "Converting warped image to gray" << endl;
-    Mat grayWarped;
-    cvtColor(this->warper.getResult(), grayWarped, COLOR_BGR2GRAY);
-    imwrite("../warpedGray.jpg", grayWarped);
+    // cout << "Converting warped image to gray" << endl;
+    // Mat grayWarped;
+    // cvtColor(this->warper.getResult(), grayWarped, COLOR_BGR2GRAY);
+    // imwrite("../warpedGray.jpg", grayWarped);
 
     cout << "Detecting blobs" << endl;
 
-    this->blobDetector.setInputImage(grayWarped);
+    this->blobDetector.setInputImage(this->warper.getResult());
     blobDetector.saveInputImage("blobInput.jpg");
     this->blobDetector.doTheJob();
 
@@ -171,8 +171,8 @@ void GroundTruthEvaluator::doTheJob(){
     Point2f firstBlob = this->blobDetector.getResult()[0].pt;
     Point2f firstBlobMM(0,0);
 
-    firstBlobMM.y = (firstBlob.x/grayWarped.cols)*this->screenWidthMM;
-    firstBlobMM.x = (firstBlob.y/grayWarped.rows)*this->screenHeightMM;
+    firstBlobMM.y = (firstBlob.x/this->warper.getResult().cols)*this->screenWidthMM;
+    firstBlobMM.x = (firstBlob.y/this->warper.getResult().rows)*this->screenHeightMM;
 
     Point2f secondBlobMM(0,0);
 
