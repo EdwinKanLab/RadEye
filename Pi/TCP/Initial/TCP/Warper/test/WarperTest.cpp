@@ -137,8 +137,6 @@ int main(){
     warper.saveResultAsImage("../Results/1d_warpedImage.jpg");
 
 
-
-
     // fourPlaneCorners.saveResultAsImage("../Results/5b_cornerImage5b.jpg");
 
     
