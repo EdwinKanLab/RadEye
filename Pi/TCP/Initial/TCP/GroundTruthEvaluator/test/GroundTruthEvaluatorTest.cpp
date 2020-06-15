@@ -133,7 +133,7 @@ int main(){
     // cout << "Evaluated Ground Truth" << endl;
     // cout << "Read image 0" << endl;
 
-
+    cout << "About to test on 100 images" << endl;
     Mat image;
     for (int i = 0; i < 100; i++){
         // cout << "Reading image # " << i << endl;
