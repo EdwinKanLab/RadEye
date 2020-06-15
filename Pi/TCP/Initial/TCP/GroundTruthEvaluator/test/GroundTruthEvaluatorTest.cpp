@@ -205,6 +205,15 @@ int main(){
     // blobDetector2.setMinRepeatability(2);
     // blobDetector2.setMinDistBetweenBlobs(0);
     GroundTruthEvaluator groundTruthEvaluator = GroundTruthEvaluator();
+    groundTruthEvaluator.setBlobDetector(blobDetector);
+    groundTruthEvaluator.blobDetector.setThresholdParams(200, 255, 10);
+    groundTruthEvaluator.blobDetector.setColorParams(true, 255);
+    groundTruthEvaluator.blobDetector.setAreaParams(false, 0, 2);
+    groundTruthEvaluator.blobDetector.setCircularityParams(false, 0, 1);
+    groundTruthEvaluator.blobDetector.setInertiaParams(true, 0.2, 1);
+    groundTruthEvaluator.blobDetector.setConvexityParams(false, 0.0, 1);
+    groundTruthEvaluator.blobDetector.setMinRepeatability(2);
+    groundTruthEvaluator.blobDetector.setMinDistBetweenBlobs(0);
     groundTruthEvaluator.setScreenDimMM(screenWidthMM, screenHeightMM);
 
     groundTruthEvaluator.setCroppers(initialDiscardB, topLeftRegionB,
@@ -214,7 +223,7 @@ int main(){
     
     groundTruthEvaluator.setSingleCorner(singleCorner);
     groundTruthEvaluator.setWarper(warper);
-    groundTruthEvaluator.setBlobDetector(blobDetector);
+    
 
     // ///////////////////////////////////////////////////////////////////////////
     groundTruthEvaluator.blobDetector.setInputImage(warper.getResult());
