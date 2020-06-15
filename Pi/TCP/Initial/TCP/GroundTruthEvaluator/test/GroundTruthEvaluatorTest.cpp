@@ -136,7 +136,7 @@ int main(){
 
     Mat image;
     for (int i = 0; i < 100; i++){
-        cout << "Reading image # " << i << endl;
+        // cout << "Reading image # " << i << endl;
         image = imread("../100images/raspicam_cv_image_"+
         to_string(i)+".jpg", IMREAD_COLOR);
 
@@ -144,11 +144,11 @@ int main(){
             cout <<  "Could not open or find one or more images" << endl ;
             return -1;
         }
-        cout << "Finished reading" << endl;
+        // cout << "Finished reading" << endl;
 
         start = chrono::high_resolution_clock::now();
         
-        cout << "Started timing" << endl;
+        // cout << "Started timing" << endl;
         groundTruthEvaluator.setInputImage(image);
         // cout << "Set input image" << endl;
         groundTruthEvaluator.doTheJob();
