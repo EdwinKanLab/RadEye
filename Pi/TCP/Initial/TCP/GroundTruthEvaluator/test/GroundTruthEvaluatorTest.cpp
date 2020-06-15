@@ -188,7 +188,7 @@ int main(){
     blobDetector.setInputImage(warper.getResult());
     blobDetector.doTheJob();
     cout << "Found "<< blobDetector.getResult().size() << " blobs." << endl;
-    blobDetector.saveInputImage("../blobInput.jpg");
+    // blobDetector.saveInputImage("../blobInput.jpg");
     blobDetector.saveResultAsImage("../Results/blobDetector.jpg");
 
     ///////////////////////////////////////////////////////////////////////////
@@ -209,18 +209,19 @@ int main(){
     // ///////////////////////////////////////////////////////////////////////////
     groundTruthEvaluator.blobDetector.setInputImage(warper.getResult());
     groundTruthEvaluator.blobDetector.doTheJob();
-    cout << "Found "<< groundTruthEvaluator.blobDetector.getResult().size() << " blobs." << endl;
-    groundTruthEvaluator.blobDetector.saveInputImage("../GTEblobInput2.jpg");
-    groundTruthEvaluator.blobDetector.saveResultAsImage("../Results/GTEblobDetector2.jpg");
+    // cout << "Found "<< groundTruthEvaluator.blobDetector.getResult().size() << " blobs." << endl;
+    // groundTruthEvaluator.blobDetector.saveInputImage("../GTEblobInput2.jpg");
+    // groundTruthEvaluator.blobDetector.saveResultAsImage("../Results/GTEblobDetector2.jpg");
 
     groundTruthEvaluator.setInputImage(image);
     groundTruthEvaluator.doTheJob();
     
     groundTruthEvaluator.saveInputImage("../Results/"+
     to_string(0)+"a_inputImage.jpg");
+
     
-    // groundTruthEvaluator.saveResultAsImage("../Results/"+
-    // to_string(0)+"b_groundTruthImage.jpg");
+    groundTruthEvaluator.saveResultAsImage("../Results/"+
+    to_string(0)+"b_groundTruthImage.jpg");
     
     ///////////////////////////////////////////////////////////////////////////
 }
