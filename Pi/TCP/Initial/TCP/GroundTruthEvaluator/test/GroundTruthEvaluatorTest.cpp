@@ -134,31 +134,33 @@ int main(){
     // cout << "Read image 0" << endl;
 
 
-    // for (int i = 0; i < 5; i++){
-    //     cout << "Reading image # " << i << endl;
-    //     image = imread("../100images/raspicam_cv_image_"+
-    //     to_string(i)+".jpg", IMREAD_COLOR);
+    Mat image;
+    for (int i = 0; i < 100; i++){
+        cout << "Reading image # " << i << endl;
+        image = imread("../100images/raspicam_cv_image_"+
+        to_string(i)+".jpg", IMREAD_COLOR);
 
-    //     if(!(image.data)){
-    //         cout <<  "Could not open or find one or more images" << endl ;
-    //         return -1;
-    //     }
-    //     cout << "Finished reading" << endl;
+        if(!(image.data)){
+            cout <<  "Could not open or find one or more images" << endl ;
+            return -1;
+        }
+        cout << "Finished reading" << endl;
 
-    //     start = chrono::high_resolution_clock::now();
-    //     cout << "Started timing" << endl;
-    //     groundTruthEvaluator.setInputImage(image);
-    //     cout << "Set input image" << endl;
-    //     groundTruthEvaluator.doTheJob();
-    //     cout << "Evaluated Ground Truth" << endl;
-
-    //     stop = chrono::high_resolution_clock::now();
+        start = chrono::high_resolution_clock::now();
         
-    //     duration = chrono::duration_cast<chrono::microseconds>(stop - start);
-    //     total += duration.count();
-    // }
+        cout << "Started timing" << endl;
+        groundTruthEvaluator.setInputImage(image);
+        // cout << "Set input image" << endl;
+        groundTruthEvaluator.doTheJob();
+        
+        // cout << "Evaluated Ground Truth" << endl;
+        stop = chrono::high_resolution_clock::now();
+        
+        duration = chrono::duration_cast<chrono::microseconds>(stop - start);
+        total += duration.count();
+    }
 
-    // cout << "Total time for 100 images: " << total << endl;
+    cout << "Total time for 100 images: " << total << endl;
     cout << "Finished Test" << endl;
     cout << "Check Results directory for the image files" << endl;
 
