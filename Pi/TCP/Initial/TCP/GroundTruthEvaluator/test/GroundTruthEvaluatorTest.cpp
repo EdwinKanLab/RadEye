@@ -192,28 +192,9 @@ int main(){
     blobDetector.saveResultAsImage("../Results/blobDetector.jpg");
 
     ///////////////////////////////////////////////////////////////////////////
-    // doTheJob(initialDiscardB, topLeftRegionB, topRightRegionB, bottomRightRegionB,
-    // bottomLeftRegionB, singleCorner, warper, blobDetector, image, screenWidthMM,
-    // screenHeightMM);
-    // BlobDetector blobDetector2 = BlobDetector();
-    // blobDetector2.setThresholdParams(200, 255, 10);
-    // blobDetector2.setColorParams(true, 255);
-    // blobDetector2.setAreaParams(false, 0, 2);
-    // blobDetector2.setCircularityParams(false, 0, 1);
-    // blobDetector2.setInertiaParams(true, 0.2, 1);
-    // blobDetector2.setConvexityParams(false, 0.0, 1);
-    // blobDetector2.setMinRepeatability(2);
-    // blobDetector2.setMinDistBetweenBlobs(0);
     GroundTruthEvaluator groundTruthEvaluator = GroundTruthEvaluator();
     groundTruthEvaluator.setBlobDetector(blobDetector);
-    // groundTruthEvaluator.blobDetector.setThresholdParams(200, 255, 10);
-    // groundTruthEvaluator.blobDetector.setColorParams(true, 255);
-    // groundTruthEvaluator.blobDetector.setAreaParams(false, 0, 2);
-    // groundTruthEvaluator.blobDetector.setCircularityParams(false, 0, 1);
-    // groundTruthEvaluator.blobDetector.setInertiaParams(true, 0.2, 1);
-    // groundTruthEvaluator.blobDetector.setConvexityParams(false, 0.0, 1);
-    // groundTruthEvaluator.blobDetector.setMinRepeatability(2);
-    // groundTruthEvaluator.blobDetector.setMinDistBetweenBlobs(0);
+
     groundTruthEvaluator.setScreenDimMM(screenWidthMM, screenHeightMM);
 
     groundTruthEvaluator.setCroppers(initialDiscardB, topLeftRegionB,

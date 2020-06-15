@@ -149,60 +149,60 @@ Point2f GroundTruthEvaluator::getCorner(Cropper& region){
 
 void GroundTruthEvaluator::doTheJob(){
 
-    cout << "Applying croppers" << endl;
-    // this->applyCroppers();
-    this->initialDiscard.setInputImage(this->inputImage);
-    this->initialDiscard.doTheJob();
+    // cout << "Applying croppers" << endl;
+    this->applyCroppers();
+    // this->initialDiscard.setInputImage(this->inputImage);
+    // this->initialDiscard.doTheJob();
 
-    this->topLeftRegion.setInputImage(this->initialDiscard.getResult());
-    this->topRightRegion.setInputImage(this->initialDiscard.getResult());
-    this->bottomRightRegion.setInputImage(this->initialDiscard.getResult());
-    this->bottomLeftRegion.setInputImage(this->initialDiscard.getResult());
+    // this->topLeftRegion.setInputImage(this->initialDiscard.getResult());
+    // this->topRightRegion.setInputImage(this->initialDiscard.getResult());
+    // this->bottomRightRegion.setInputImage(this->initialDiscard.getResult());
+    // this->bottomLeftRegion.setInputImage(this->initialDiscard.getResult());
     
-    this->topLeftRegion.doTheJob();
-    this->topRightRegion.doTheJob();
-    this->bottomRightRegion.doTheJob();
-    this->bottomLeftRegion.doTheJob();
+    // this->topLeftRegion.doTheJob();
+    // this->topRightRegion.doTheJob();
+    // this->bottomRightRegion.doTheJob();
+    // this->bottomLeftRegion.doTheJob();
     
-    cout << "Croppers applied" << endl;
+    // cout << "Croppers applied" << endl;
 
-    cout << "Getting top left corner" << endl;
+    // cout << "Getting top left corner" << endl;
     
     this->warper.setTopLeftSrcPoint(this->getCorner(this->topLeftRegion));
     
-    cout << "Getting top right corner" << endl;
+    // cout << "Getting top right corner" << endl;
     
     this->warper.setTopRightSrcPoint(this->getCorner(this->topRightRegion));
     
-    cout << "Getting top bottom right corner" << endl;
+    // cout << "Getting top bottom right corner" << endl;
     
     this->warper.setBottomRightSrcPoint(this->getCorner(this->bottomRightRegion));
 
-    cout << "Getting bottom left corner" << endl;
+    // cout << "Getting bottom left corner" << endl;
 
     this->warper.setBottomLeftSrcPoint(this->getCorner(this->bottomLeftRegion));
 
-    cout << "Setting warper input image" << endl;
+    // cout << "Setting warper input image" << endl;
     
     this->warper.setInputImage(this->initialDiscard.getResult());
 
-    cout << "warping the image" << endl;
+    // cout << "warping the image" << endl;
 
     this->warper.doTheJob();
-    this->warper.saveResultAsImage("../warpedImage.jpg");
+    // this->warper.saveResultAsImage("../warpedImage.jpg");
     // cout << "Converting warped image to gray" << endl;
     // Mat grayWarped;
     // cvtColor(this->warper.getResult(), grayWarped, COLOR_BGR2GRAY);
     // imwrite("../warpedGray.jpg", grayWarped);
 
-    cout << "Detecting blobs" << endl;
+    // cout << "Detecting blobs" << endl;
 
     this->blobDetector.setInputImage(this->warper.getResult());
-    this->blobDetector.saveInputImage("../GTEBlobInput.jpg");
+    // this->blobDetector.saveInputImage("../GTEBlobInput.jpg");
     this->blobDetector.doTheJob();
 
-    cout << "Blobs detected" << endl;
-    cout << "Number of blobs detected: " << this->blobDetector.getResult().size() << endl;
+    // cout << "Blobs detected" << endl;
+    // cout << "Number of blobs detected: " << this->blobDetector.getResult().size() << endl;
     Point2f firstBlobMM(-1,-1);
     Point2f secondBlobMM(-1,-1);
 
