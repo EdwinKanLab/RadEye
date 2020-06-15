@@ -109,9 +109,9 @@ int main(){
     GroundTruthEvaluator groundTruthEvaluator = GroundTruthEvaluator();
     groundTruthEvaluator.setScreenDimMM(screenWidthMM, screenHeightMM);
 
-    groundTruthEvaluator.setCroppers(initialDiscard, topLeftRegion,
-                                     topRightRegion, bottomRightRegion,
-                                     bottomLeftRegion);
+    groundTruthEvaluator.setCroppers(initialDiscardB, topLeftRegionB,
+                                     topRightRegionB, bottomRightRegionB,
+                                     bottomLeftRegionB);
 
     
     groundTruthEvaluator.setSingleCorner(singleCorner);
