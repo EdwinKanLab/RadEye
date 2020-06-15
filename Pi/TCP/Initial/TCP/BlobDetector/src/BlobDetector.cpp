@@ -77,7 +77,7 @@ void BlobDetector::setConvexityParams(bool filterByConvexity, float minConvexity
 void BlobDetector::setMinRepeatability(size_t minRepeatability){
     this->params.minRepeatability = minRepeatability;
 
-    this->detector = SimpleBlobDetector::create(this->params);
+    this->updateDetector();
 }
 
 void BlobDetector::setMinDistBetweenBlobs(float minDistBetweenBlobs){
