@@ -153,7 +153,8 @@ int main(){
         
         // cout << "Evaluated Ground Truth" << endl;
         stop = chrono::high_resolution_clock::now();
-        
+        groundTruthEvaluator.saveResultAsImage("../100imagesResults/"+to_string(i)+
+        "_groundTruthImage.jpg");
         duration = chrono::duration_cast<chrono::microseconds>(stop - start);
         total += duration.count();
     }
