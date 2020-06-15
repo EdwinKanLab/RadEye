@@ -19,6 +19,8 @@
 using namespace cv;
 using namespace std;
 
+Point2f result [2];
+
 Point2f getCorner(Cropper& region, CornerDetector& singleCorner){
 
     singleCorner.setInputImage(region.getResult());
@@ -34,6 +36,87 @@ Point2f getCorner(Cropper& region, CornerDetector& singleCorner){
 
 }
 
+void doTheJob(Cropper& initialDiscard, Cropper& topLeftRegion,
+Cropper& topRightRegion, Cropper& bottomRightRegion, Cropper& bottomLeftRegion,
+CornerDetector& singleCorner, Warper& warper, BlobDetector& blobDetector,
+Mat& inputImage, float screenWidthMM, float screenHeightMM){
+
+    cout << "Applying croppers" << endl;
+    // this->applyCroppers();
+    initialDiscard.setInputImage(inputImage);
+    initialDiscard.doTheJob();
+
+    topLeftRegion.setInputImage(initialDiscard.getResult());
+    topRightRegion.setInputImage(initialDiscard.getResult());
+    bottomRightRegion.setInputImage(initialDiscard.getResult());
+    bottomLeftRegion.setInputImage(initialDiscard.getResult());
+    
+    topLeftRegion.doTheJob();
+    topRightRegion.doTheJob();
+    bottomRightRegion.doTheJob();
+    bottomLeftRegion.doTheJob();
+    
+    cout << "Croppers applied" << endl;
+
+    cout << "Getting top left corner" << endl;
+    
+    warper.setTopLeftSrcPoint(getCorner(topLeftRegion, singleCorner));
+    
+    cout << "Getting top right corner" << endl;
+    
+    warper.setTopRightSrcPoint(getCorner(topRightRegion, singleCorner));
+    
+    cout << "Getting top bottom right corner" << endl;
+    
+    warper.setBottomRightSrcPoint(getCorner(bottomRightRegion, singleCorner));
+
+    cout << "Getting bottom left corner" << endl;
+
+    warper.setBottomLeftSrcPoint(getCorner(bottomLeftRegion, singleCorner));
+
+    cout << "Setting warper input image" << endl;
+    
+    warper.setInputImage(initialDiscard.getResult());
+
+    cout << "warping the image" << endl;
+
+    warper.doTheJob();
+    warper.saveResultAsImage("../warpedImage.jpg");
+    // cout << "Converting warped image to gray" << endl;
+    // Mat grayWarped;
+    // cvtColor(warper.getResult(), grayWarped, COLOR_BGR2GRAY);
+    // imwrite("../warpedGray.jpg", grayWarped);
+
+    cout << "Detecting blobs" << endl;
+
+    blobDetector.setInputImage(warper.getResult());
+    blobDetector.saveInputImage("../GTEBlobInput.jpg");
+    blobDetector.doTheJob();
+
+    cout << "Blobs detected" << endl;
+    cout << "Number of blobs detected: " << blobDetector.getResult().size() << endl;
+    Point2f firstBlobMM(-1,-1);
+    Point2f secondBlobMM(-1,-1);
+
+    if (blobDetector.getResult().size()>= 1){
+        Point2f firstBlob = blobDetector.getResult()[0].pt;
+        firstBlobMM.y = (1-(firstBlob.x/warper.getResult().cols))*screenWidthMM;
+        firstBlobMM.x = (firstBlob.y/warper.getResult().rows)*screenHeightMM;
+
+        if (blobDetector.getResult().size() > 1){
+            Point2f secondBlob = blobDetector.getResult()[1].pt;
+            secondBlobMM.y = (secondBlob.x/warper.getResult().cols)*screenWidthMM;
+            secondBlobMM.x = (secondBlob.y/warper.getResult().rows)*screenHeightMM;
+        }
+    }
+    else{
+        cout << "No blobs found. Try again." << endl;
+    }
+
+    result[0] = firstBlobMM;
+    result[1] = secondBlobMM;
+
+}
 
 
 
@@ -109,35 +192,38 @@ int main(){
     blobDetector.saveResultAsImage("../Results/blobDetector.jpg");
 
     ///////////////////////////////////////////////////////////////////////////
-    BlobDetector blobDetector2 = BlobDetector();
-    blobDetector2.setThresholdParams(200, 255, 10);
-    blobDetector2.setColorParams(true, 255);
-    blobDetector2.setAreaParams(false, 0, 2);
-    blobDetector2.setCircularityParams(false, 0, 1);
-    blobDetector2.setInertiaParams(true, 0.2, 1);
-    blobDetector2.setConvexityParams(false, 0.0, 1);
-    blobDetector2.setMinRepeatability(2);
-    blobDetector2.setMinDistBetweenBlobs(0);
-    GroundTruthEvaluator groundTruthEvaluator = GroundTruthEvaluator();
-    groundTruthEvaluator.setScreenDimMM(screenWidthMM, screenHeightMM);
+    doTheJob(initialDiscardB, topLeftRegionB, topRightRegionB, bottomRightRegionB,
+    bottomLeftRegionB, singleCorner, warper, blobDetector, image, screenWidthMM,
+    screenHeightMM);
+    // BlobDetector blobDetector2 = BlobDetector();
+    // blobDetector2.setThresholdParams(200, 255, 10);
+    // blobDetector2.setColorParams(true, 255);
+    // blobDetector2.setAreaParams(false, 0, 2);
+    // blobDetector2.setCircularityParams(false, 0, 1);
+    // blobDetector2.setInertiaParams(true, 0.2, 1);
+    // blobDetector2.setConvexityParams(false, 0.0, 1);
+    // blobDetector2.setMinRepeatability(2);
+    // blobDetector2.setMinDistBetweenBlobs(0);
+    // GroundTruthEvaluator groundTruthEvaluator = GroundTruthEvaluator();
+    // groundTruthEvaluator.setScreenDimMM(screenWidthMM, screenHeightMM);
 
-    groundTruthEvaluator.setCroppers(initialDiscardB, topLeftRegionB,
-                                     topRightRegionB, bottomRightRegionB,
-                                     bottomLeftRegionB);
+    // groundTruthEvaluator.setCroppers(initialDiscardB, topLeftRegionB,
+    //                                  topRightRegionB, bottomRightRegionB,
+    //                                  bottomLeftRegionB);
 
     
-    groundTruthEvaluator.setSingleCorner(singleCorner);
-    groundTruthEvaluator.setWarper(warper);
-    groundTruthEvaluator.setBlobDetector(blobDetector2);
+    // groundTruthEvaluator.setSingleCorner(singleCorner);
+    // groundTruthEvaluator.setWarper(warper);
+    // groundTruthEvaluator.setBlobDetector(blobDetector2);
 
-    ///////////////////////////////////////////////////////////////////////////
+    // ///////////////////////////////////////////////////////////////////////////
 
 
-    groundTruthEvaluator.setInputImage(image);
-    groundTruthEvaluator.doTheJob();
+    // groundTruthEvaluator.setInputImage(image);
+    // groundTruthEvaluator.doTheJob();
     
-    groundTruthEvaluator.saveInputImage("../Results/"+
-    to_string(0)+"a_inputImage.jpg");
+    // groundTruthEvaluator.saveInputImage("../Results/"+
+    // to_string(0)+"a_inputImage.jpg");
     
     // groundTruthEvaluator.saveResultAsImage("../Results/"+
     // to_string(0)+"b_groundTruthImage.jpg");
