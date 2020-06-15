@@ -34,6 +34,8 @@ Point2f getCorner(Cropper& region, CornerDetector& singleCorner){
 
 }
 
+
+
 int main(){
     
     Mat image;
@@ -100,7 +102,7 @@ int main(){
     ///////////////////////////////////////////////////////////////////////////
     blobDetector.setInputImage(warper.getResult());
     blobDetector.doTheJob();
-    cout << "Found "<<blobDetector.getResult().size() << " blobs." << endl;
+    cout << "Found "<< blobDetector.getResult().size() << " blobs." << endl;
     blobDetector.saveResultAsImage("../Results/blobDetector.jpg");
 
     ///////////////////////////////////////////////////////////////////////////

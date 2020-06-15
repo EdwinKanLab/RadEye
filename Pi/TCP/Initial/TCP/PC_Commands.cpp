@@ -106,6 +106,40 @@ raspicam::RaspiCam_Cv Camera;
 
 //////////////////////////////////////////////////////////////////////////
 
+const char vertical_1_sno [9] = "00295780";
+const char horizontal_1_sno [9] = "00286960";
+
+const char vertical_2_sno [9] = "00295780";
+const char horizontal_2_sno [9] = "00286960";
+
+
+uint8_t step_mode = 3;
+uint8_t mult = (uint8_t) pow(2, (double)step_mode);
+uint32_t max_speed = 2000000 * mult;
+uint32_t starting_speed = 0;
+uint32_t max_decel = 40000 * mult;
+uint32_t max_accel = 40000 * mult; 
+uint16_t current_limit = 1000;
+int32_t curr_pos = 0;
+int32_t full_vertical = 83;
+
+TicDriver* vertical_1 = createTicDriver(vertical_1_sno, max_speed, starting_speed,
+max_decel, max_accel, step_mode, current_limit, curr_pos);
+
+TicDriver* horizontal_1 = createTicDriver(horizontal_1_sno, max_speed, starting_speed,
+max_decel, max_accel, step_mode, current_limit, curr_pos);
+
+TicDriver* vertical_2 = createTicDriver(vertical_2_sno, max_speed, starting_speed,
+max_decel, max_accel, step_mode, current_limit, curr_pos);
+
+TicDriver* horizontal_2 = createTicDriver(horizontal_2_sno, max_speed, starting_speed,
+max_decel, max_accel, step_mode, current_limit, curr_pos);
+
+Mat image;
+
+//////////////////////////////////////////////////////////////////////////
+
+
 void setup(){
     if (Camera.isOpened()){
         Camera.release();
@@ -138,41 +172,7 @@ void setup(){
     if (!Camera.open()) {cerr<<"Error opening the camera"<<endl;}
 }
 
-///////////////////////////////////////////////////////////////////////////////
 
-
-
-
-const char vertical_1_sno [9] = "00295780";
-const char horizontal_1_sno [9] = "00286960";
-
-const char vertical_2_sno [9] = "00295780";
-const char horizontal_2_sno [9] = "00286960";
-
-
-uint8_t step_mode = 3;
-uint8_t mult = (uint8_t) pow(2, (double)step_mode);
-uint32_t max_speed = 2000000 * mult;
-uint32_t starting_speed = 0;
-uint32_t max_decel = 40000 * mult;
-uint32_t max_accel = 40000 * mult; 
-uint16_t current_limit = 1000;
-int32_t curr_pos = 0;
-int32_t full_vertical = 83;
-
-TicDriver* vertical_1 = createTicDriver(vertical_1_sno, max_speed, starting_speed,
-max_decel, max_accel, step_mode, current_limit, curr_pos);
-
-TicDriver* horizontal_1 = createTicDriver(horizontal_1_sno, max_speed, starting_speed,
-max_decel, max_accel, step_mode, current_limit, curr_pos);
-
-TicDriver* vertical_2 = createTicDriver(vertical_2_sno, max_speed, starting_speed,
-max_decel, max_accel, step_mode, current_limit, curr_pos);
-
-TicDriver* horizontal_2 = createTicDriver(horizontal_2_sno, max_speed, starting_speed,
-max_decel, max_accel, step_mode, current_limit, curr_pos);
-
-Mat image;
 
 const vector<string> explode(const string& s, const char& c)
 {
@@ -189,20 +189,36 @@ const vector<string> explode(const string& s, const char& c)
 	return v;
 }
 
+string formatFloat(float input){
+    float rounded = roundf(input*10)/10;
+    string result = to_string(rounded);
+    result = string(5-result.length(), '0')+result;
+    return result;
+}
 
 string getCoordinate(){
     // vector<vector<float>> coord;
     // coord = IP.getCoordinate();
     Camera.grab();
-    Camera.retrieve (image);
+    Camera.retrieve(image);
     groundTruthEvaluator.setInputImage(image);
     groundTruthEvaluator.doTheJob();
+    int numTries = 1;
+    while (numTries < 10 && groundTruthEvaluator.getResult()[0].x == -1){
+        Camera.grab();
+        Camera.retrieve (image);
+        groundTruthEvaluator.setInputImage(image);
+        groundTruthEvaluator.doTheJob();
+        numTries++;
+    }
 
     string result ="23";
     for (int i = 0; i < 2; i++){
-        result += to_string(groundTruthEvaluator.getResult()[i].x).substr(0,5);
+        // result += to_string(groundTruthEvaluator.getResult()[i].x).substr(0,5);
+        result += formatFloat(groundTruthEvaluator.getResult()[i].x);
         result += " ";
-        result += to_string(groundTruthEvaluator.getResult()[i].y).substr(0,5);
+        // result += to_string(groundTruthEvaluator.getResult()[i].y).substr(0,5);
+        result += formatFloat(groundTruthEvaluator.getResult()[i].y);
         result += " ";
     }
     return result.substr(0,25);

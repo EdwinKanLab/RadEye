@@ -91,7 +91,8 @@ void GroundTruthEvaluator::setBlobDetector(const BlobDetector& blobDetector){
 }
 
 void GroundTruthEvaluator::setInputImage(const Mat& inputImage){
-    flip(inputImage, this->inputImage, 1);
+    this->inputImage = inputImage;
+    // flip(inputImage, this->inputImage, 1);
 }
 
 void GroundTruthEvaluator::applyCroppers(){
@@ -127,7 +128,19 @@ Point2f GroundTruthEvaluator::getCorner(Cropper& region){
 void GroundTruthEvaluator::doTheJob(){
 
     cout << "Applying croppers" << endl;
-    this->applyCroppers();
+    // this->applyCroppers();
+    this->initialDiscard.setInputImage(this->inputImage);
+    this->initialDiscard.doTheJob();
+
+    this->topLeftRegion.setInputImage(this->initialDiscard.getResult());
+    this->topRightRegion.setInputImage(this->initialDiscard.getResult());
+    this->bottomRightRegion.setInputImage(this->initialDiscard.getResult());
+    this->bottomLeftRegion.setInputImage(this->initialDiscard.getResult());
+    
+    this->topLeftRegion.doTheJob();
+    this->topRightRegion.doTheJob();
+    this->bottomRightRegion.doTheJob();
+    this->bottomLeftRegion.doTheJob();
     
     cout << "Croppers applied" << endl;
 
@@ -168,18 +181,22 @@ void GroundTruthEvaluator::doTheJob(){
 
     cout << "Blobs detected" << endl;
     cout << "Number of blobs detected: " << this->blobDetector.getResult().size() << endl;
-    Point2f firstBlob = this->blobDetector.getResult()[0].pt;
-    Point2f firstBlobMM(0,0);
+    Point2f firstBlobMM(-1,-1);
+    Point2f secondBlobMM(-1,-1);
 
-    firstBlobMM.y = (firstBlob.x/this->warper.getResult().cols)*this->screenWidthMM;
-    firstBlobMM.x = (firstBlob.y/this->warper.getResult().rows)*this->screenHeightMM;
+    if (this->blobDetector.getResult().size()>= 1){
+        Point2f firstBlob = this->blobDetector.getResult()[0].pt;
+        firstBlobMM.y = (1-(firstBlob.x/this->warper.getResult().cols))*this->screenWidthMM;
+        firstBlobMM.x = (firstBlob.y/this->warper.getResult().rows)*this->screenHeightMM;
 
-    Point2f secondBlobMM(0,0);
-
-    if (this->blobDetector.getResult().size() > 1){
-        Point2f secondBlob = this->blobDetector.getResult()[1].pt;
-        secondBlobMM.y = (secondBlob.x/this->warper.getResult().cols)*this->screenWidthMM;
-        secondBlobMM.x = (secondBlob.y/this->warper.getResult().rows)*this->screenHeightMM;
+        if (this->blobDetector.getResult().size() > 1){
+            Point2f secondBlob = this->blobDetector.getResult()[1].pt;
+            secondBlobMM.y = (secondBlob.x/this->warper.getResult().cols)*this->screenWidthMM;
+            secondBlobMM.x = (secondBlob.y/this->warper.getResult().rows)*this->screenHeightMM;
+        }
+    }
+    else{
+        cout << "No blobs found. Try again." << endl;
     }
 
     this->result[0] = firstBlobMM;
@@ -192,7 +209,18 @@ void GroundTruthEvaluator::doTheJob(){
 
 void GroundTruthEvaluator::saveResultAsImage(string imagePath){
     Mat resultImage;
-    drawKeypoints(this->warper.getResult(), this->blobDetector.getResult(),
+    Mat warpedFlipped;
+    flip(this->warper.getResult(), warpedFlipped, 1);
+    vector<KeyPoint> keypoints;
+
+    if (this->blobDetector.getResult().size() >= 1){
+        keypoints.push_back(this->blobDetector.getResult()[0]);
+    }
+    if (this->blobDetector.getResult().size() > 1){
+        keypoints.push_back(this->blobDetector.getResult()[1]);
+    }
+    
+    drawKeypoints(warpedFlipped, keypoints,
                   resultImage,
                   Scalar(255,0,0),
                   DrawMatchesFlags::DRAW_RICH_KEYPOINTS);
