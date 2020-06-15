@@ -174,7 +174,7 @@ int main(){
 
     ///////////////////////////////////////////////////////////////////////////
 
-    BlobDetector blobDetector = BlobDetector();
+    BlobDetector blobDetector;
     blobDetector.setThresholdParams(200, 255, 10);
     blobDetector.setColorParams(true, 255);
     blobDetector.setAreaParams(false, 0, 2);

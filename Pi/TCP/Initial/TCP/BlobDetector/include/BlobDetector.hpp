@@ -7,10 +7,6 @@
 class BlobDetector{
 private:
     cv::Mat inputImage;
- 	
-	
-    
-    cv::SimpleBlobDetector::Params params;
     
     std::vector<cv::KeyPoint> result;
 
@@ -21,6 +17,8 @@ private:
 public:
 
     BlobDetector();
+    
+    cv::SimpleBlobDetector::Params params;
     
     void setThresholdParams(int minThreshold, int maxThreshold, float thresholdStep);
 

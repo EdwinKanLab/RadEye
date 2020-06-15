@@ -90,6 +90,26 @@ void GroundTruthEvaluator::setWarper(Warper& warper){
 
 void GroundTruthEvaluator::setBlobDetector(BlobDetector& blobDetector){
     this->blobDetector = blobDetector;
+    this->blobDetector.setThresholdParams(blobDetector.params.minThreshold,
+    blobDetector.params.maxThreshold, blobDetector.params.thresholdStep);
+
+    this->blobDetector.setColorParams(blobDetector.params.filterByColor,
+    blobDetector.params.blobColor);
+
+    this->blobDetector.setAreaParams(blobDetector.params.filterByArea,
+    blobDetector.params.minArea, blobDetector.params.maxArea);
+
+    this->blobDetector.setCircularityParams(blobDetector.params.filterByCircularity,
+    blobDetector.params.minCircularity, blobDetector.params.maxCircularity);
+
+    this->blobDetector.setInertiaParams(blobDetector.params.filterByInertia,
+    blobDetector.params.minInertiaRatio, blobDetector.params.maxInertiaRatio);
+    
+    this->blobDetector.setConvexityParams(blobDetector.params.filterByConvexity,
+    blobDetector.params.minConvexity, blobDetector.params.maxConvexity);
+
+    this->blobDetector.setMinRepeatability(blobDetector.params.minRepeatability);
+    this->blobDetector.setMinDistBetweenBlobs(blobDetector.params.minDistBetweenBlobs);
 }
 
 void GroundTruthEvaluator::setInputImage(Mat& inputImage){
