@@ -36,6 +36,8 @@ Point2f getCorner(Cropper& region, CornerDetector& singleCorner){
 
 
 
+
+
 int main(){
     
     Mat image;
@@ -107,6 +109,15 @@ int main(){
     blobDetector.saveResultAsImage("../Results/blobDetector.jpg");
 
     ///////////////////////////////////////////////////////////////////////////
+    BlobDetector blobDetector2 = BlobDetector();
+    blobDetector2.setThresholdParams(200, 255, 10);
+    blobDetector2.setColorParams(true, 255);
+    blobDetector2.setAreaParams(false, 0, 2);
+    blobDetector2.setCircularityParams(false, 0, 1);
+    blobDetector2.setInertiaParams(true, 0.2, 1);
+    blobDetector2.setConvexityParams(false, 0.0, 1);
+    blobDetector2.setMinRepeatability(2);
+    blobDetector2.setMinDistBetweenBlobs(0);
     GroundTruthEvaluator groundTruthEvaluator = GroundTruthEvaluator();
     groundTruthEvaluator.setScreenDimMM(screenWidthMM, screenHeightMM);
 
@@ -117,7 +128,7 @@ int main(){
     
     groundTruthEvaluator.setSingleCorner(singleCorner);
     groundTruthEvaluator.setWarper(warper);
-    groundTruthEvaluator.setBlobDetector(blobDetector);
+    groundTruthEvaluator.setBlobDetector(blobDetector2);
 
     ///////////////////////////////////////////////////////////////////////////
 
