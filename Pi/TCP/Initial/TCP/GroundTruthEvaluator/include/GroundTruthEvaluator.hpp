@@ -13,7 +13,7 @@
 
 
 class GroundTruthEvaluator{
-public:
+private:
     cv::Mat inputImage;
  	cv::Point2f result[2];
 
@@ -34,7 +34,7 @@ public:
     void applyCroppers();
     cv::Point2f getCorner(Cropper& region);
     
-// public:
+public:
 
     GroundTruthEvaluator();
     GroundTruthEvaluator(float screenWidthMM,

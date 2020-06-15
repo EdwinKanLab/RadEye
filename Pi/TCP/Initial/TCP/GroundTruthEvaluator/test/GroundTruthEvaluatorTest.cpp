@@ -12,14 +12,12 @@
 #include <opencv2/imgcodecs.hpp>
 
 #include <iostream>
-// #include <filesystem>
+
 #include <string>
 #include <chrono> 
-#include <utility>
 
 using namespace cv;
 using namespace std;
-// using path = std::filesystem::path;
 
 
 int main(){
@@ -29,7 +27,7 @@ int main(){
     Mat image3 = imread("../TestImages/testImage3.jpg", IMREAD_COLOR);
     Mat image4 = imread("../TestImages/testImage4.jpg", IMREAD_COLOR);
     Mat image5 = imread("../TestImages/testImage5.jpg", IMREAD_COLOR);
-    if(!(image1.data && image2.data && image3.data && image4.data && image5.data))                              // Check for invalid input
+    if(!(image1.data && image2.data && image3.data && image4.data && image5.data))
     {
         cout <<  "Could not open or find one or more images" << std::endl ;
         return -1;
