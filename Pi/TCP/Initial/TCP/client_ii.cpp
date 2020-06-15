@@ -69,7 +69,7 @@ int main()
             }
             else{
                 numInvalid++;
-                cout<< "Invalid command received\n";
+                cout<< "Invalid command received: " << command << endl;
                 clientResp = "07invalid";
                 if (numInvalid >= 10) exit = true;
             }
