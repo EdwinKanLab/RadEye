@@ -155,6 +155,8 @@ int main(){
         stop = chrono::high_resolution_clock::now();
         groundTruthEvaluator.saveResultAsImage("../100imagesResults/"+to_string(i)+
         "_groundTruthImage.jpg");
+        groundTruthEvaluator.saveInputImage("../100imagesResults/"+to_string(i)+
+        "_inputImage.jpg");
         duration = chrono::duration_cast<chrono::microseconds>(stop - start);
         total += duration.count();
     }
