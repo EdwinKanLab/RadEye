@@ -241,6 +241,10 @@ void GroundTruthEvaluator::saveResultAsImage(string imagePath){
     if (this->blobDetector.getResult().size() > 1){
         keypoints.push_back(this->blobDetector.getResult()[1]);
     }
+
+    for (int i = 0; i < keypoints.size(); i++){
+        keypoints[i].pt.x = warpedFlipped.cols - keypoints[i].pt.x;
+    }
     
     drawKeypoints(warpedFlipped, keypoints,
                   resultImage,
@@ -249,8 +253,8 @@ void GroundTruthEvaluator::saveResultAsImage(string imagePath){
     
     string label;
     Point2f blobPoint;
-    for (int i = 0; i < 2; i++){
-        blobPoint = this->blobDetector.getResult()[i].pt;
+    for (int i = 0; i < keypoints.size(); i++){
+        blobPoint = keypoints[i].pt;
         label = "x: ";
         label += to_string(this->result[i].x).substr(0,5);
         label += "mm ; y: ";
