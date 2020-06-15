@@ -79,16 +79,22 @@ float screenHeightMM;
 // Cropper bottomLeftRegion(0.85, 0.98, 0, 0.15);
 // Cropper bottomRightRegion(0.85, 1, 0.85, 0.99);
 
-Cropper initialDiscard(0.18, 0.98, 0.03, 0.88);
-Cropper topLeftRegion(0.05, 0.15, 0.0, 0.15);
-Cropper topRightRegion(0.0, 0.10, 0.9, 1);
-Cropper bottomLeftRegion(0.85, 1, 0.01, 0.15);
-Cropper bottomRightRegion(0.85, 0.98, 0.85, 1);
+// Cropper initialDiscard(0.18, 0.98, 0.03, 0.88);
+// Cropper topLeftRegion(0.05, 0.15, 0.0, 0.15);
+// Cropper topRightRegion(0.0, 0.10, 0.9, 1);
+// Cropper bottomLeftRegion(0.85, 1, 0.01, 0.15);
+// Cropper bottomRightRegion(0.85, 0.98, 0.85, 1);
+
+Cropper initialDiscard(0.18, 0.98, 0.12, 0.97);
+Cropper topLeftRegion(0, 0.10, 0.0, 0.10);
+Cropper topRightRegion(0.05, 0.15, 0.85, 1);
+Cropper bottomLeftRegion(0.85, 0.98, 0, 0.15);
+Cropper bottomRightRegion(0.85, 1, 0.85, 0.99);
 
 ///////////////////////////////////////////////////////////////////////////
 
 CornerDetector singleCorner(1,0.1,100);
-CornerDetector fourPlaneCorners(4, 0.1, 100);
+// CornerDetector fourPlaneCorners(4, 0.1, 100);
 
 ///////////////////////////////////////////////////////////////////////////
 
@@ -150,7 +156,7 @@ void setup(){
     blobDetector.setColorParams(true, 255);
     blobDetector.setAreaParams(false, 0, 2);
     blobDetector.setCircularityParams(false, 0, 1);
-    blobDetector.setInertiaParams(true, 0.3, 1);
+    blobDetector.setInertiaParams(true, 0.2, 1);
     blobDetector.setConvexityParams(false, 0.0, 1);
     blobDetector.setMinRepeatability(2);
     blobDetector.setMinDistBetweenBlobs(0);
@@ -190,8 +196,11 @@ const vector<string> explode(const string& s, const char& c)
 }
 
 string formatFloat(float input){
-    float rounded = roundf(input*10)/10;
-    string result = to_string(rounded);
+    float rounded = roundf(input*10);
+    int r = (int) rounded;
+    int dec = r % 10;
+    r /= 10;
+    string result = to_string(r) + "." + to_string(dec);
     result = string(5-result.length(), '0')+result;
     return result;
 }
