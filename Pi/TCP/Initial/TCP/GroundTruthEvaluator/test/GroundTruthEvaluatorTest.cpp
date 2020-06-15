@@ -217,7 +217,11 @@ int main(){
     groundTruthEvaluator.setBlobDetector(blobDetector);
 
     // ///////////////////////////////////////////////////////////////////////////
-
+    groundTruthEvaluator.blobDetector.setInputImage(warper.getResult());
+    groundTruthEvaluator.blobDetector.doTheJob();
+    cout << "Found "<< groundTruthEvaluator.blobDetector.getResult().size() << " blobs." << endl;
+    groundTruthEvaluator.blobDetector.saveInputImage("../GTEblobInput2.jpg");
+    groundTruthEvaluator.blobDetector.saveResultAsImage("../Results/GTEblobDetector2.jpg");
 
     groundTruthEvaluator.setInputImage(image);
     groundTruthEvaluator.doTheJob();
