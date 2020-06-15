@@ -73,7 +73,7 @@ int main()
                 clientResp = "07invalid";
                 if (numInvalid >= 10) exit = true;
             }
-            cout << command << endl;
+            // cout << command << endl;
         }
         
         int sendRes = send(sock, clientResp.c_str(), clientResp.size() + 1, 0);
