@@ -16,22 +16,6 @@ string
 vector
 -
 
-/home/pi/Code/Github/RadEye/Pi/TCP/Initial/TCP/BlobDetector/src/BlobDetector.cpp
-../include/BlobDetector.hpp
-/home/pi/Code/Github/RadEye/Pi/TCP/Initial/TCP/BlobDetector/include/BlobDetector.hpp
-opencv2/core/mat.hpp
--
-opencv2/features2d.hpp
--
-opencv2/imgcodecs.hpp
--
-opencv2/imgproc.hpp
--
-vector
--
-string
--
-
 /home/pi/Code/Github/RadEye/Pi/TCP/Initial/TCP/CornerDetector/include/CornerDetector.hpp
 opencv2/core/mat.hpp
 -
