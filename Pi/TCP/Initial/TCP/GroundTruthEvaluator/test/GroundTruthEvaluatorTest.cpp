@@ -103,6 +103,7 @@ int main(){
     blobDetector.setInputImage(warper.getResult());
     blobDetector.doTheJob();
     cout << "Found "<< blobDetector.getResult().size() << " blobs." << endl;
+    blobDetector.saveInputImage("../blobInput.jpg");
     blobDetector.saveResultAsImage("../Results/blobDetector.jpg");
 
     ///////////////////////////////////////////////////////////////////////////
