@@ -12,7 +12,7 @@ using namespace cv;
 #include <iostream>
 
 GroundTruthEvaluator::GroundTruthEvaluator(){
-    this->result = vector<Point2f>(2, Point2f(0,0));
+    this->result = vector<Point2f>(2, Point2f(-1,-1));
 }
 
 
@@ -35,7 +35,7 @@ GroundTruthEvaluator::GroundTruthEvaluator(float screenWidthMM,
     this->warper = warper;
     this->singleCorner = singleCorner;
     this->blobDetector = blobDetector;
-    this->result = vector<Point2f>(2, Point2f(0,0));
+    this->result = vector<Point2f>(2, Point2f(-1,-1));
 
 }
 

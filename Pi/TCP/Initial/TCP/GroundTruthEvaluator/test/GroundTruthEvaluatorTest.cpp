@@ -106,7 +106,7 @@ int main(){
     blobDetector.saveResultAsImage("../Results/blobDetector.jpg");
 
     ///////////////////////////////////////////////////////////////////////////
-    GroundTruthEvaluator groundTruthEvaluator;
+    GroundTruthEvaluator groundTruthEvaluator = GroundTruthEvaluator();
     groundTruthEvaluator.setScreenDimMM(screenWidthMM, screenHeightMM);
 
     groundTruthEvaluator.setCroppers(initialDiscard, topLeftRegion,
