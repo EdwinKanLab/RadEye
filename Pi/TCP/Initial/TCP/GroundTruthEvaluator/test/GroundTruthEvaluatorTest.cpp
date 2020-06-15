@@ -192,9 +192,9 @@ int main(){
     blobDetector.saveResultAsImage("../Results/blobDetector.jpg");
 
     ///////////////////////////////////////////////////////////////////////////
-    doTheJob(initialDiscardB, topLeftRegionB, topRightRegionB, bottomRightRegionB,
-    bottomLeftRegionB, singleCorner, warper, blobDetector, image, screenWidthMM,
-    screenHeightMM);
+    // doTheJob(initialDiscardB, topLeftRegionB, topRightRegionB, bottomRightRegionB,
+    // bottomLeftRegionB, singleCorner, warper, blobDetector, image, screenWidthMM,
+    // screenHeightMM);
     // BlobDetector blobDetector2 = BlobDetector();
     // blobDetector2.setThresholdParams(200, 255, 10);
     // blobDetector2.setColorParams(true, 255);
@@ -204,26 +204,26 @@ int main(){
     // blobDetector2.setConvexityParams(false, 0.0, 1);
     // blobDetector2.setMinRepeatability(2);
     // blobDetector2.setMinDistBetweenBlobs(0);
-    // GroundTruthEvaluator groundTruthEvaluator = GroundTruthEvaluator();
-    // groundTruthEvaluator.setScreenDimMM(screenWidthMM, screenHeightMM);
+    GroundTruthEvaluator groundTruthEvaluator = GroundTruthEvaluator();
+    groundTruthEvaluator.setScreenDimMM(screenWidthMM, screenHeightMM);
 
-    // groundTruthEvaluator.setCroppers(initialDiscardB, topLeftRegionB,
-    //                                  topRightRegionB, bottomRightRegionB,
-    //                                  bottomLeftRegionB);
+    groundTruthEvaluator.setCroppers(initialDiscardB, topLeftRegionB,
+                                     topRightRegionB, bottomRightRegionB,
+                                     bottomLeftRegionB);
 
     
-    // groundTruthEvaluator.setSingleCorner(singleCorner);
-    // groundTruthEvaluator.setWarper(warper);
-    // groundTruthEvaluator.setBlobDetector(blobDetector2);
+    groundTruthEvaluator.setSingleCorner(singleCorner);
+    groundTruthEvaluator.setWarper(warper);
+    groundTruthEvaluator.setBlobDetector(blobDetector);
 
     // ///////////////////////////////////////////////////////////////////////////
 
 
-    // groundTruthEvaluator.setInputImage(image);
-    // groundTruthEvaluator.doTheJob();
+    groundTruthEvaluator.setInputImage(image);
+    groundTruthEvaluator.doTheJob();
     
-    // groundTruthEvaluator.saveInputImage("../Results/"+
-    // to_string(0)+"a_inputImage.jpg");
+    groundTruthEvaluator.saveInputImage("../Results/"+
+    to_string(0)+"a_inputImage.jpg");
     
     // groundTruthEvaluator.saveResultAsImage("../Results/"+
     // to_string(0)+"b_groundTruthImage.jpg");

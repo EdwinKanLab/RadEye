@@ -19,14 +19,14 @@ GroundTruthEvaluator::GroundTruthEvaluator(){
 
 GroundTruthEvaluator::GroundTruthEvaluator(float screenWidthMM,
                          float screenHeightMM,
-                         const Cropper& initialDiscard,
-                         const Cropper& topLeftRegion,
-                         const Cropper& topRightRegion,
-                         const Cropper& bottomRightRegion,
-                         const Cropper& bottomLeftRegion,
-                         const CornerDetector& singleCorner,
-                         const Warper& warper,
-                         const BlobDetector& blobDetector){
+                         Cropper& initialDiscard,
+                         Cropper& topLeftRegion,
+                         Cropper& topRightRegion,
+                         Cropper& bottomRightRegion,
+                         Cropper& bottomLeftRegion,
+                         CornerDetector& singleCorner,
+                         Warper& warper,
+                         BlobDetector& blobDetector){
 
     this->initialDiscard = initialDiscard;
     this->topLeftRegion = topLeftRegion;
@@ -46,11 +46,11 @@ void GroundTruthEvaluator::setScreenDimMM(float screenWidthMM, float screenHeigh
     this->screenHeightMM = screenHeightMM;
 }
 
-void GroundTruthEvaluator::setCroppers(const Cropper& initialDiscard,
-                     const Cropper& topLeftRegion,
-                     const Cropper& topRightRegion,
-                     const Cropper& bottomRightRegion,
-                     const Cropper& bottomLeftRegion){
+void GroundTruthEvaluator::setCroppers(Cropper& initialDiscard,
+                     Cropper& topLeftRegion,
+                     Cropper& topRightRegion,
+                     Cropper& bottomRightRegion,
+                     Cropper& bottomLeftRegion){
 
     this->initialDiscard = initialDiscard;
     this->topLeftRegion = topLeftRegion;
@@ -60,39 +60,39 @@ void GroundTruthEvaluator::setCroppers(const Cropper& initialDiscard,
 
 }
 
-void GroundTruthEvaluator::setInitialDiscard(const Cropper& initialDiscard){
+void GroundTruthEvaluator::setInitialDiscard(Cropper& initialDiscard){
     this->initialDiscard = initialDiscard;
 }
-void GroundTruthEvaluator::setTopLeftRegion(const Cropper& topLeftRegion){
+void GroundTruthEvaluator::setTopLeftRegion(Cropper& topLeftRegion){
     this->topLeftRegion = topLeftRegion;
 }
 
-void GroundTruthEvaluator::setTopRightRegion(const Cropper& topRightRegion){
+void GroundTruthEvaluator::setTopRightRegion(Cropper& topRightRegion){
     this->topRightRegion = topRightRegion;
 }
 
-void GroundTruthEvaluator::setBottomRightRegion(const Cropper& bottomRightRegion){
+void GroundTruthEvaluator::setBottomRightRegion(Cropper& bottomRightRegion){
     this->bottomRightRegion = bottomRightRegion;
 }
 
-void GroundTruthEvaluator::setBottomLeftRegion(const Cropper& bottomLeftRegion){
+void GroundTruthEvaluator::setBottomLeftRegion(Cropper& bottomLeftRegion){
     this->bottomLeftRegion = bottomLeftRegion;
 }
 
 
-void GroundTruthEvaluator::setSingleCorner(const CornerDetector& singleCorner){
+void GroundTruthEvaluator::setSingleCorner(CornerDetector& singleCorner){
     this->singleCorner = singleCorner;
 }
 
-void GroundTruthEvaluator::setWarper(const Warper& warper){
+void GroundTruthEvaluator::setWarper(Warper& warper){
     this->warper = warper;
 }
 
-void GroundTruthEvaluator::setBlobDetector(const BlobDetector& blobDetector){
+void GroundTruthEvaluator::setBlobDetector(BlobDetector& blobDetector){
     this->blobDetector = blobDetector;
 }
 
-void GroundTruthEvaluator::setInputImage(const Mat& inputImage){
+void GroundTruthEvaluator::setInputImage(Mat& inputImage){
     this->inputImage = inputImage;
     // flip(inputImage, this->inputImage, 1);
 }

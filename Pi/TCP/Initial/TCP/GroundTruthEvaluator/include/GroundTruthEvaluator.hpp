@@ -39,36 +39,36 @@ public:
     GroundTruthEvaluator();
     GroundTruthEvaluator(float screenWidthMM,
                          float screenHeightMM,
-                         const Cropper& initialDiscard,
-                         const Cropper& topLeftRegion,
-                         const Cropper& topRightRegion,
-                         const Cropper& bottomRightRegion,
-                         const Cropper& bottomLeftRegion,
-                         const CornerDetector& singleCorner,
-                         const Warper& warper,
-                         const BlobDetector& blobDetector);
+                         Cropper& initialDiscard,
+                         Cropper& topLeftRegion,
+                         Cropper& topRightRegion,
+                         Cropper& bottomRightRegion,
+                         Cropper& bottomLeftRegion,
+                         CornerDetector& singleCorner,
+                         Warper& warper,
+                         BlobDetector& blobDetector);
     
     void setScreenDimMM(float screenWidthMM, float screenHeightMM);
     
-    void setCroppers(const Cropper& initialDiscard,
-                     const Cropper& topLeftRegion,
-                     const Cropper& topRightRegion,
-                     const Cropper& bottomRightRegion,
-                     const Cropper& bottomLeftRegion);
+    void setCroppers(Cropper& initialDiscard,
+                     Cropper& topLeftRegion,
+                     Cropper& topRightRegion,
+                     Cropper& bottomRightRegion,
+                     Cropper& bottomLeftRegion);
     
     
-    void setInitialDiscard(const Cropper& initialDiscard);
-    void setTopLeftRegion(const Cropper& topLeftRegion);
-    void setTopRightRegion(const Cropper& topRightRegion);
-    void setBottomRightRegion(const Cropper& bottomRightRegion);
-    void setBottomLeftRegion(const Cropper& bottomLeftRegion);
+    void setInitialDiscard(Cropper& initialDiscard);
+    void setTopLeftRegion(Cropper& topLeftRegion);
+    void setTopRightRegion(Cropper& topRightRegion);
+    void setBottomRightRegion(Cropper& bottomRightRegion);
+    void setBottomLeftRegion(Cropper& bottomLeftRegion);
 
 
-    void setSingleCorner(const CornerDetector& singleCorner);
-    void setWarper(const Warper& warper);
-    void setBlobDetector(const BlobDetector& blobDetector);
+    void setSingleCorner(CornerDetector& singleCorner);
+    void setWarper(Warper& warper);
+    void setBlobDetector(BlobDetector& blobDetector);
 
-    void setInputImage(const cv::Mat& inputImage);
+    void setInputImage(cv::Mat& inputImage);
     void doTheJob();
     void saveResultAsImage(std::string imagePath);
     void saveInputImage(std::string imagePath);
