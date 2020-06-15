@@ -46,7 +46,7 @@ int main()
     string command = "";
     string clientResp = "";
     bool exit = false;
-
+    int numInvalid = 0;
     while (!exit){
         memset(buf, 0, 128);
         clientResp = "";
@@ -68,9 +68,10 @@ int main()
                 clientResp = "04exit";
             }
             else{
+                numInvalid++;
                 cout<< "Invalid command received\n";
                 clientResp = "07invalid";
-                exit = true;
+                if (numInvalid >= 10) exit = true;
             }
             cout << command << endl;
         }
