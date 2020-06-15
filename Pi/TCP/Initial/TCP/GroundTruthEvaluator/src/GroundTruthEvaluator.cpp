@@ -12,7 +12,8 @@ using namespace cv;
 #include <iostream>
 
 GroundTruthEvaluator::GroundTruthEvaluator(){
-    this->result = vector<Point2f>(2, Point2f(-1,-1));
+    this->result[0] = Point2f(-1, -1);
+    this->result[1] = Point2f(-1, -1);
 }
 
 
@@ -35,7 +36,8 @@ GroundTruthEvaluator::GroundTruthEvaluator(float screenWidthMM,
     this->warper = warper;
     this->singleCorner = singleCorner;
     this->blobDetector = blobDetector;
-    this->result = vector<Point2f>(2, Point2f(-1,-1));
+    this->result[0] = Point2f(-1, -1);
+    this->result[1] = Point2f(-1, -1);
 
 }
 
@@ -244,6 +246,6 @@ void GroundTruthEvaluator::saveInputImage(string imagePath){
     imwrite(imagePath, this->inputImage);
 }
 
-vector<Point2f> GroundTruthEvaluator::getResult(){
+Point2f* GroundTruthEvaluator::getResult(){
     return this->result;
 }

@@ -15,7 +15,7 @@
 class GroundTruthEvaluator{
 private:
     cv::Mat inputImage;
- 	std::vector<cv::Point2f> result;
+ 	cv::Point2f result[2];
 
     float screenWidthMM;
     float screenHeightMM;
@@ -73,6 +73,6 @@ public:
     void saveResultAsImage(std::string imagePath);
     void saveInputImage(std::string imagePath);
     
-    std::vector<cv::Point2f> getResult();
+    cv::Point2f* getResult();
 
 };
