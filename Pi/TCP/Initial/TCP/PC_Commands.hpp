@@ -34,7 +34,7 @@ void setup();
 
 void run_exit();
 
-string getCoordinate();
+string getCoordinate(int i);
 
 string gotoCenter();
 

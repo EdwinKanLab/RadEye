@@ -211,7 +211,7 @@ string formatFloat(float input){
     return result;
 }
 
-string getCoordinate(){
+string getCoordinate(int i){
     // vector<vector<float>> coord;
     // coord = IP.getCoordinate();
     Camera.grab();
@@ -226,14 +226,20 @@ string getCoordinate(){
         groundTruthEvaluator.doTheJob();
         numTries++;
     }
+    groundTruthEvaluator.saveInputImage("../SavedImages/"+
+        to_string(i)+"a_inputImage.jpg");
+    
+    groundTruthEvaluator.saveResultAsImage("../SavedImages/"+
+        to_string(i)+"b_groundTruthImage.jpg");
+    }
 
     string result ="23";
-    for (int i = 0; i < 2; i++){
+    for (int j = 0; j < 2; j++){
         // result += to_string(groundTruthEvaluator.getResult()[i].x).substr(0,5);
-        result += formatFloat(groundTruthEvaluator.getResult()[i].x);
+        result += formatFloat(groundTruthEvaluator.getResult()[j].x);
         result += " ";
         // result += to_string(groundTruthEvaluator.getResult()[i].y).substr(0,5);
-        result += formatFloat(groundTruthEvaluator.getResult()[i].y);
+        result += formatFloat(groundTruthEvaluator.getResult()[j].y);
         result += " ";
     }
     return result.substr(0,25);

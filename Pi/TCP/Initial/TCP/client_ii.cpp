@@ -42,7 +42,7 @@ int main()
     cout <<"Connection successful." << endl;
     //	While loop:
     char buf[128];
-    
+    int i = 0;
     string command = "";
     string clientResp = "";
     bool exit = false;
@@ -57,7 +57,10 @@ int main()
 
         else{
             command = string(buf, bytesReceived);
-            if (command.compare("getCoordinate")==0) clientResp = getCoordinate();
+            if (command.compare("getCoordinate")==0){
+                clientResp = getCoordinate(i);
+                i += 1;
+            }
 
             else if (command.compare("gotoCenter")==0) clientResp = gotoCenter();
 
