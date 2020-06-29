@@ -31,7 +31,7 @@ int main(){
 
     CornerDetector singleCorner(1,0.1,100);
 
-    CornerDetector fourPlaneCorners(4, 0.1, 500);
+    CornerDetector fourPlaneCorners(4, 0.1, 600);
     ///////////////////////////////////////////////////////////////////////////
 
     singleCorner.setInputImage(image1);
