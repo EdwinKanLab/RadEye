@@ -109,7 +109,7 @@ int main(){
         result += to_string(groundTruthEvaluator.getResult()[0].x);
         result += ",";
         result += to_string(groundTruthEvaluator.getResult()[0].y);
-        result += "/n";
+        result += "\n";
         myfile << result;
         
     }
