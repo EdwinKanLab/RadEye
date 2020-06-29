@@ -51,10 +51,14 @@ void CornerDetector::setInputImage(const Mat& inputImage){
     Mat gray;
     // cvtColor(inputImage, this->grayImage, COLOR_BGR2GRAY);
     cvtColor(inputImage, gray, COLOR_BGR2GRAY);
+    // Mat gBlur1;
     Mat gBlur;
     GaussianBlur(gray, gBlur, Size(5,5), 0);
+    // GaussianBlur(gBlur1, gBlur, Size(5,5), 0);
     threshold(gBlur, gray, 0, 255, THRESH_BINARY + THRESH_OTSU);
-    GaussianBlur(gray, this->grayImage, Size(5,5), 0);
+    Mat ggBlur;
+    GaussianBlur(gray, ggBlur, Size(5,5), 0);
+    GaussianBlur(ggBlur, this->grayImage, Size(5,5), 0);
 }
 
 void CornerDetector::doTheJob(){
