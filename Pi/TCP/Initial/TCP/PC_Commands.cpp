@@ -226,14 +226,15 @@ string getCoordinate(int i){
         groundTruthEvaluator.doTheJob();
         numTries++;
     }
+
     groundTruthEvaluator.saveInputImage("../SavedImages/"+
         to_string(i)+"a_inputImage.jpg");
     
     groundTruthEvaluator.saveResultAsImage("../SavedImages/"+
         to_string(i)+"b_groundTruthImage.jpg");
-    }
 
     string result ="23";
+
     for (int j = 0; j < 2; j++){
         // result += to_string(groundTruthEvaluator.getResult()[i].x).substr(0,5);
         result += formatFloat(groundTruthEvaluator.getResult()[j].x);
