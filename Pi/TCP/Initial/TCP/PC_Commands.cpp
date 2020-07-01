@@ -178,10 +178,6 @@ void setup(){
     warper.setTopRightSrcPoint(getCorner(topRightRegion));    
     warper.setBottomRightSrcPoint(getCorner(bottomRightRegion));
     warper.setBottomLeftSrcPoint(getCorner(bottomLeftRegion));
-    cout << "TL x: " << warper.srcPoints[0].x << " TL y: " << warper.srcPoints[0].x << endl;
-    cout << "TR x: " << warper.srcPoints[1].x << " TR y: " << warper.srcPoints[1].y << endl;
-    cout << "BR x: " << warper.srcPoints[2].x << " BR y: " << warper.srcPoints[2].y << endl;
-    cout << "BL x: " << warper.srcPoints[3].x << " BL y: " << warper.srcPoints[3].y << endl;
     groundTruthEvaluator.setWarper(warper);
 }
 
