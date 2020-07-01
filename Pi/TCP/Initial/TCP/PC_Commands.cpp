@@ -137,6 +137,16 @@ Point2f getCorner(Cropper& region){
     return result;
 
 }
+
+void setCorners(){
+    sleep(3);
+    applyCroppers();
+    warper.setTopLeftSrcPoint(getCorner(topLeftRegion));
+    warper.setTopRightSrcPoint(getCorner(topRightRegion));    
+    warper.setBottomRightSrcPoint(getCorner(bottomRightRegion));
+    warper.setBottomLeftSrcPoint(getCorner(bottomLeftRegion));
+    groundTruthEvaluator.setWarper(warper);
+}
 ///////////////////////////////////////////////////////////////////////////////
 
 void setup(){
@@ -170,14 +180,7 @@ void setup(){
     Camera.set( CAP_PROP_FORMAT, CV_32FC3 );
     if (!Camera.open()) {cerr<<"Error opening the camera"<<endl;}
     //////////////////////////////////////////////////////////////////////////
-    sleep(3);
-    applyCroppers();
-
-    warper.setTopLeftSrcPoint(getCorner(topLeftRegion));
-    warper.setTopRightSrcPoint(getCorner(topRightRegion));    
-    warper.setBottomRightSrcPoint(getCorner(bottomRightRegion));
-    warper.setBottomLeftSrcPoint(getCorner(bottomLeftRegion));
-    groundTruthEvaluator.setWarper(warper);
+    setCorners();
 }
 
 
@@ -223,11 +226,11 @@ string getCoordinate(int i){
         numTries++;
     }
 
-    groundTruthEvaluator.saveInputImage("../SavedImages/"+
-        to_string(i)+"a_inputImage.jpg");
+    // groundTruthEvaluator.saveInputImage("../SavedImages/"+
+    //     to_string(i)+"a_inputImage.jpg");
     
-    groundTruthEvaluator.saveResultAsImage("../SavedImages/"+
-        to_string(i)+"b_groundTruthImage.jpg");
+    // groundTruthEvaluator.saveResultAsImage("../SavedImages/"+
+    //     to_string(i)+"b_groundTruthImage.jpg");
 
     string result ="23";
 
