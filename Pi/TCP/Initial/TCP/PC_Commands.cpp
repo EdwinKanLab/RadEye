@@ -138,16 +138,6 @@ Point2f getCorner(Cropper& region){
     return result;
 
 }
-
-void setCorners(){
-    applyCroppers();
-
-    warper.setTopLeftSrcPoint(getCorner(topLeftRegion));
-    warper.setTopRightSrcPoint(getCorner(topRightRegion));    
-    warper.setBottomRightSrcPoint(getCorner(bottomRightRegion));
-    warper.setBottomLeftSrcPoint(getCorner(bottomLeftRegion));
-    groundTruthEvaluator.setWarper(warper);
-}
 ///////////////////////////////////////////////////////////////////////////////
 
 void setup(){
@@ -174,14 +164,20 @@ void setup(){
 
 
     groundTruthEvaluator.setSingleCorner(singleCorner);
-    groundTruthEvaluator.setWarper(warper);
+    // groundTruthEvaluator.setWarper(warper);
     groundTruthEvaluator.setBlobDetector(blobDetector);
 
     ///////////////////////////////////////////////////////////////////////////
     Camera.set( CAP_PROP_FORMAT, CV_32FC3 );
     if (!Camera.open()) {cerr<<"Error opening the camera"<<endl;}
     //////////////////////////////////////////////////////////////////////////
-    setCorners();
+    sleep(5);
+    applyCroppers();
+    warper.setTopLeftSrcPoint(getCorner(topLeftRegion));
+    warper.setTopRightSrcPoint(getCorner(topRightRegion));    
+    warper.setBottomRightSrcPoint(getCorner(bottomRightRegion));
+    warper.setBottomLeftSrcPoint(getCorner(bottomLeftRegion));
+    groundTruthEvaluator.setWarper(warper);
 }
 
 
