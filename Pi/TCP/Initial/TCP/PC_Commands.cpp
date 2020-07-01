@@ -106,7 +106,49 @@ max_decel, max_accel, step_mode, current_limit, curr_pos);
 Mat image;
 
 //////////////////////////////////////////////////////////////////////////
+void applyCroppers(){
+    Camera.grab();
+    Camera.retrieve(image);
+    Camera.release();
 
+    initialDiscard.setInputImage(image);
+    initialDiscard.doTheJob();
+
+    topLeftRegion.setInputImage(initialDiscard.getResult());
+    topRightRegion.setInputImage(initialDiscard.getResult());
+    bottomRightRegion.setInputImage(initialDiscard.getResult());
+    bottomLeftRegion.setInputImage(initialDiscard.getResult());
+    
+    topLeftRegion.doTheJob();
+    topRightRegion.doTheJob();
+    bottomRightRegion.doTheJob();
+    bottomLeftRegion.doTheJob();
+}
+
+Point2f getCorner(Cropper& region){
+
+    singleCorner.setInputImage(region.getResult());
+    singleCorner.doTheJob();
+    Point2f result = singleCorner.getResult()[0];
+    Point2f origin;
+    origin.x =  (float) (int) (region.getLeftRatio() * (region.getInputImage().cols));
+    origin.y = (float) (int) (region.getTopRatio() * (region.getInputImage().rows));
+    result += origin;
+
+    return result;
+
+}
+
+void setCorners(){
+    applyCroppers();
+
+    warper.setTopLeftSrcPoint(getCorner(topLeftRegion));
+    warper.setTopRightSrcPoint(getCorner(topRightRegion));    
+    warper.setBottomRightSrcPoint(getCorner(bottomRightRegion));
+    warper.setBottomLeftSrcPoint(getCorner(bottomLeftRegion));
+    groundTruthEvaluator.setWarper(warper);
+}
+///////////////////////////////////////////////////////////////////////////////
 
 void setup(){
     if (Camera.isOpened()){
@@ -247,47 +289,3 @@ void run_exit(){
 
 
 
-applyCroppers(){
-    Camera.grab();
-    Camera.retrieve(image);
-    Camera.release();
-
-    initialDiscard.setInputImage(image);
-    initialDiscard.doTheJob();
-
-    topLeftRegion.setInputImage(initialDiscard.getResult());
-    topRightRegion.setInputImage(initialDiscard.getResult());
-    bottomRightRegion.setInputImage(initialDiscard.getResult());
-    bottomLeftRegion.setInputImage(initialDiscard.getResult());
-    
-    topLeftRegion.doTheJob();
-    topRightRegion.doTheJob();
-    bottomRightRegion.doTheJob();
-    bottomLeftRegion.doTheJob();
-}
-
-Point2f getCorner(Cropper& region){
-
-    singleCorner.setInputImage(region.getResult());
-    singleCorner.doTheJob();
-    Point2f result = singleCorner.getResult()[0];
-    Point2f origin;
-    origin.x =  (float) (int) (region.getLeftRatio() * (region.getInputImage().cols));
-    origin.y = (float) (int) (region.getTopRatio() * (region.getInputImage().rows));
-    result += origin;
-
-    return result;
-
-}
-
-void setCorners(){
-    Camera.grab();
-    Camera.retrieve(image);
-    Camera.release();
-
-    warper.setTopLeftSrcPoint(getCorner(topLeftRegion));
-    warper.setTopRightSrcPoint(getCorner(topRightRegion));    
-    warper.setBottomRightSrcPoint(getCorner(bottomRightRegion));
-    warper.setBottomLeftSrcPoint(getCorner(bottomLeftRegion));
-    groundTruthEvaluator.setWarper(warper);
-}
