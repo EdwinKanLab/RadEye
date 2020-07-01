@@ -86,7 +86,11 @@ void GroundTruthEvaluator::setSingleCorner(CornerDetector& singleCorner){
 
 void GroundTruthEvaluator::setWarper(Warper& warper){
     this->warper = warper;
-    this->warper.setAllSrcPoints(warper.srcPoints);
+    this->warper.setTopLeftSrcPoint(warper.topLeftSrcPoint);
+    this->warper.setTopRightSrcPoint(warper.topRightSrcPoint);
+    this->warper.setBottomRightSrcPoint(warper.bottomRightSrcPoint);
+    this->warper.setBottomLeftSrcPoint(warper.bottomLeftSrcPoint);
+    // this->warper.setAllSrcPoints(warper.srcPoints);
 }
 
 void GroundTruthEvaluator::setBlobDetector(BlobDetector& blobDetector){

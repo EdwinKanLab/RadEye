@@ -171,7 +171,7 @@ void setup(){
     Camera.set( CAP_PROP_FORMAT, CV_32FC3 );
     if (!Camera.open()) {cerr<<"Error opening the camera"<<endl;}
     //////////////////////////////////////////////////////////////////////////
-    sleep(5);
+    sleep(3);
     Camera.grab();
     Camera.retrieve(image);
     Camera.release();
@@ -188,7 +188,7 @@ void setup(){
     topRightRegion.doTheJob();
     bottomRightRegion.doTheJob();
     bottomLeftRegion.doTheJob();
-    
+
     warper.setTopLeftSrcPoint(getCorner(topLeftRegion));
     warper.setTopRightSrcPoint(getCorner(topRightRegion));    
     warper.setBottomRightSrcPoint(getCorner(bottomRightRegion));
