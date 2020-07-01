@@ -35,55 +35,12 @@
 using namespace std;
 using namespace cv;
 
-// ImageProcessor IP;
 
-
-
-// ///////////////////////////////////////////////////////////////////////////
-// float screenWidthMM = 267;
-// float screenHeightMM = 180.5;
-
-// ///////////////////////////////////////////////////////////////////////////
-// // Cropper initialDiscard(0.18, 0.98, 0.12, 0.97);
-// // Cropper topLeftRegion(0, 0.10, 0.0, 0.10);
-// // Cropper topRightRegion(0.05, 0.15, 0.85, 1);
-// // Cropper bottomLeftRegion(0.85, 0.98, 0, 0.15);
-// // Cropper bottomRightRegion(0.85, 1, 0.85, 0.99);
-
-// Cropper initialDiscard(0.18, 0.98, 0.03, 0.88);
-// Cropper topLeftRegion(0.05, 0.15, 0.0, 0.15);
-// Cropper topRightRegion(0.0, 0.10, 0.9, 1);
-// Cropper bottomLeftRegion(0.85, 1, 0.01, 0.15);
-// Cropper bottomRightRegion(0.85, 0.98, 0.85, 1);
-
-// ///////////////////////////////////////////////////////////////////////////
-
-// CornerDetector singleCorner(1,0.1,100);
-// CornerDetector fourPlaneCorners(4, 0.1, 100);
-
-// ///////////////////////////////////////////////////////////////////////////
-
-// Warper warper;
-
-// ///////////////////////////////////////////////////////////////////////////
-
-// BlobDetector blobDetector;
 ///////////////////////////////////////////////////////////////////////////
 float screenWidthMM;
 float screenHeightMM;
 
 ///////////////////////////////////////////////////////////////////////////
-// Cropper initialDiscard(0.18, 0.98, 0.12, 0.97);
-// Cropper topLeftRegion(0, 0.10, 0.0, 0.10);
-// Cropper topRightRegion(0.05, 0.15, 0.85, 1);
-// Cropper bottomLeftRegion(0.85, 0.98, 0, 0.15);
-// Cropper bottomRightRegion(0.85, 1, 0.85, 0.99);
-
-// Cropper initialDiscard(0.18, 0.98, 0.03, 0.88);
-// Cropper topLeftRegion(0.05, 0.15, 0.0, 0.15);
-// Cropper topRightRegion(0.0, 0.10, 0.9, 1);
-// Cropper bottomLeftRegion(0.85, 1, 0.01, 0.15);
-// Cropper bottomRightRegion(0.85, 0.98, 0.85, 1);
 
 Cropper initialDiscard(0.18, 0.98, 0.12, 0.97);
 Cropper topLeftRegion(0, 0.10, 0.01, 0.10);
@@ -100,7 +57,6 @@ Cropper bottomRightRegion(0.85, 1, 0.85, 0.99);
 ///////////////////////////////////////////////////////////////////////////
 
 CornerDetector singleCorner(1,0.1,100);
-// CornerDetector fourPlaneCorners(4, 0.1, 100);
 
 ///////////////////////////////////////////////////////////////////////////
 
@@ -182,6 +138,8 @@ void setup(){
     ///////////////////////////////////////////////////////////////////////////
     Camera.set( CAP_PROP_FORMAT, CV_32FC3 );
     if (!Camera.open()) {cerr<<"Error opening the camera"<<endl;}
+    //////////////////////////////////////////////////////////////////////////
+    setCorners();
 }
 
 
@@ -217,7 +175,7 @@ string getCoordinate(int i){
     Camera.grab();
     Camera.retrieve(image);
     groundTruthEvaluator.setInputImage(image);
-    groundTruthEvaluator.doTheJob();
+    groundTruthEvaluator.doTheJob(false);
     int numTries = 1;
     while (numTries < 10 && groundTruthEvaluator.getResult()[0].x == -1){
         Camera.grab();
@@ -285,4 +243,51 @@ void run_exit(){
     vertical_1->deenergize(vertical_1);
 
     vertical_2->deenergize(vertical_2);
+}
+
+
+
+applyCroppers(){
+    Camera.grab();
+    Camera.retrieve(image);
+    Camera.release();
+
+    initialDiscard.setInputImage(image);
+    initialDiscard.doTheJob();
+
+    topLeftRegion.setInputImage(initialDiscard.getResult());
+    topRightRegion.setInputImage(initialDiscard.getResult());
+    bottomRightRegion.setInputImage(initialDiscard.getResult());
+    bottomLeftRegion.setInputImage(initialDiscard.getResult());
+    
+    topLeftRegion.doTheJob();
+    topRightRegion.doTheJob();
+    bottomRightRegion.doTheJob();
+    bottomLeftRegion.doTheJob();
+}
+
+Point2f getCorner(Cropper& region){
+
+    singleCorner.setInputImage(region.getResult());
+    singleCorner.doTheJob();
+    Point2f result = singleCorner.getResult()[0];
+    Point2f origin;
+    origin.x =  (float) (int) (region.getLeftRatio() * (region.getInputImage().cols));
+    origin.y = (float) (int) (region.getTopRatio() * (region.getInputImage().rows));
+    result += origin;
+
+    return result;
+
+}
+
+void setCorners(){
+    Camera.grab();
+    Camera.retrieve(image);
+    Camera.release();
+
+    warper.setTopLeftSrcPoint(getCorner(topLeftRegion));
+    warper.setTopRightSrcPoint(getCorner(topRightRegion));    
+    warper.setBottomRightSrcPoint(getCorner(bottomRightRegion));
+    warper.setBottomLeftSrcPoint(getCorner(bottomLeftRegion));
+    groundTruthEvaluator.setWarper(warper);
 }

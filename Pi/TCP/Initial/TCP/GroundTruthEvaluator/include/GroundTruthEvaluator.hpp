@@ -70,6 +70,7 @@ public:
 
     void setInputImage(cv::Mat& inputImage);
     void doTheJob();
+    void doTheJob(bool corner);
     void saveResultAsImage(std::string imagePath);
     void saveInputImage(std::string imagePath);
     

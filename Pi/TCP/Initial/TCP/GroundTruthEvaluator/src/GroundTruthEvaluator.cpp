@@ -228,6 +228,43 @@ void GroundTruthEvaluator::doTheJob(){
 
 }
 
+void GroundTruthEvaluator::doTheJob(bool corner){
+    if (corner) this->doTheJob();
+    
+    else{
+        this->initialDiscard.setInputImage(this->inputImage);
+        this->initialDiscard.doTheJob();
+        
+        this->warper.setInputImage(this->initialDiscard.getResult());
+
+        this->warper.doTheJob();
+
+
+        this->blobDetector.setInputImage(this->warper.getResult());
+        this->blobDetector.doTheJob();
+        Point2f firstBlobMM(-1,-1);
+        Point2f secondBlobMM(-1,-1);
+
+        if (this->blobDetector.getResult().size()>= 1){
+            Point2f firstBlob = this->blobDetector.getResult()[0].pt;
+            firstBlobMM.y = (1-(firstBlob.x/this->warper.getResult().cols))*this->screenWidthMM;
+            firstBlobMM.x = (firstBlob.y/this->warper.getResult().rows)*this->screenHeightMM;
+
+            if (this->blobDetector.getResult().size() > 1){
+                Point2f secondBlob = this->blobDetector.getResult()[1].pt;
+                secondBlobMM.y = (secondBlob.x/this->warper.getResult().cols)*this->screenWidthMM;
+                secondBlobMM.x = (secondBlob.y/this->warper.getResult().rows)*this->screenHeightMM;
+            }
+        }
+        else{
+            cout << "No blobs found. Try again." << endl;
+        }
+
+        this->result[0] = firstBlobMM;
+        this->result[1] = secondBlobMM;
+    }
+
+}
 
 void GroundTruthEvaluator::saveResultAsImage(string imagePath){
     Mat resultImage;

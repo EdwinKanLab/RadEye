@@ -7,9 +7,6 @@
 #include <string.h>
 #include <string>
 #include "PC_Commands.hpp"
-// #include <raspicam/raspicam_cv.h>
-// #include "TicDriver.h"
-
 
 using namespace std;
 // using namespace cv;
