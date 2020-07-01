@@ -134,6 +134,7 @@ Point2f getCorner(Cropper& region){
     origin.x =  (float) (int) (region.getLeftRatio() * (region.getInputImage().cols));
     origin.y = (float) (int) (region.getTopRatio() * (region.getInputImage().rows));
     result += origin;
+    cout << "Corner Point x: " << result.x << " Corner Point y: " << result.y << endl;
 
     return result;
 
