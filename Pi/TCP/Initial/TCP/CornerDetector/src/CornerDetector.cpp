@@ -50,17 +50,20 @@ void CornerDetector::setInputImage(const Mat& inputImage){
     this->inputImage = inputImage;
     Mat gray;
     cvtColor(inputImage, gray, COLOR_BGR2GRAY);
+    
     Mat gBlur;
-    Mat gBlur1;
+    // Mat gBlur1;
+    threshold(gray, gBlur, 0, 255, THRESH_BINARY + THRESH_OTSU);
 
-    GaussianBlur(gray, gBlur1, Size(5,5), 0);
-    GaussianBlur(gBlur1, gBlur, Size(5,5), 0);
+    GaussianBlur(gBlur, gray, Size(3,3), 0);
+    GaussianBlur(gray, gBlur, Size(3,3), 0);
+    GaussianBlur(gBlur, gray, Size(3,3), 0);
+    
+    GaussianBlur(gray, gBlur, Size(3,3), 0);
+    GaussianBlur(gBlur, gray, Size(3,3), 0);
+    GaussianBlur(gray, gBlur, Size(3,3), 0);
 
-    threshold(gBlur, gray, 0, 255, THRESH_BINARY + THRESH_OTSU);
-
-    GaussianBlur(gray, gBlur, Size(5,5), 0);
-
-    GaussianBlur(gBlur, this->grayImage, Size(5,5), 0);
+    GaussianBlur(gBlur, this->grayImage, Size(3,3), 0);
 }
 
 void CornerDetector::doTheJob(){
@@ -81,6 +84,10 @@ void CornerDetector::saveResultAsImage(string imagePath){
 }
 void CornerDetector::saveInputImage(string imagePath){
     imwrite(imagePath, this->inputImage);
+}
+
+void CornerDetector::saveGrayImage(string imagePath){
+    imwrite(imagePath, this->grayImage);
 }
 
 vector<Point2f> CornerDetector::getResult(){

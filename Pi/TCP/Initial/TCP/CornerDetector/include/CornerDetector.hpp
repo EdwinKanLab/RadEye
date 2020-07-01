@@ -32,6 +32,7 @@ public:
     void doTheJob();
     void saveResultAsImage(std::string imagePath);
     void saveInputImage(std::string imagePath);
+    void saveGrayImage(std::string imagePath);
     std::vector<cv::Point2f> getResult();
 
 };
