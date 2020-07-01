@@ -134,7 +134,6 @@ Point2f getCorner(Cropper& region){
     origin.x =  (float) (int) (region.getLeftRatio() * (region.getInputImage().cols));
     origin.y = (float) (int) (region.getTopRatio() * (region.getInputImage().rows));
     result += origin;
-    cout << "Corner Point x: " << result.x << " Corner Point y: " << result.y << endl;
 
     return result;
 
@@ -173,27 +172,16 @@ void setup(){
     if (!Camera.open()) {cerr<<"Error opening the camera"<<endl;}
     //////////////////////////////////////////////////////////////////////////
     sleep(3);
-    Camera.grab();
-    Camera.retrieve(image);
-    Camera.release();
-
-    initialDiscard.setInputImage(image);
-    initialDiscard.doTheJob();
-
-    topLeftRegion.setInputImage(initialDiscard.getResult());
-    topRightRegion.setInputImage(initialDiscard.getResult());
-    bottomRightRegion.setInputImage(initialDiscard.getResult());
-    bottomLeftRegion.setInputImage(initialDiscard.getResult());
-    
-    topLeftRegion.doTheJob();
-    topRightRegion.doTheJob();
-    bottomRightRegion.doTheJob();
-    bottomLeftRegion.doTheJob();
+    applyCroppers();
 
     warper.setTopLeftSrcPoint(getCorner(topLeftRegion));
     warper.setTopRightSrcPoint(getCorner(topRightRegion));    
     warper.setBottomRightSrcPoint(getCorner(bottomRightRegion));
     warper.setBottomLeftSrcPoint(getCorner(bottomLeftRegion));
+    cout << "TL x: " << warper.srcPoints[0].x << " TL y: " << warper.srcPoints[0].x << endl;
+    cout << "TR x: " << warper.srcPoints[1].x << " TR y: " << warper.srcPoints[1].y << endl;
+    cout << "BR x: " << warper.srcPoints[2].x << " BR y: " << warper.srcPoints[2].y << endl;
+    cout << "BL x: " << warper.srcPoints[3].x << " BL y: " << warper.srcPoints[3].y << endl;
     groundTruthEvaluator.setWarper(warper);
 }
 
