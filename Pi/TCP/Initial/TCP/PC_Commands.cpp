@@ -109,7 +109,6 @@ Mat image;
 void applyCroppers(){
     Camera.grab();
     Camera.retrieve(image);
-    Camera.release();
 
     initialDiscard.setInputImage(image);
     initialDiscard.doTheJob();
