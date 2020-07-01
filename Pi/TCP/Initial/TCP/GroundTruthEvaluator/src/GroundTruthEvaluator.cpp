@@ -90,10 +90,10 @@ void GroundTruthEvaluator::setWarper(Warper& warper){
     this->warper.setTopRightSrcPoint(warper.topRightSrcPoint);
     this->warper.setBottomRightSrcPoint(warper.bottomRightSrcPoint);
     this->warper.setBottomLeftSrcPoint(warper.bottomLeftSrcPoint);
-    cout << "TL x: " << this->warper.srcPoints[0].x << " TL y: " << this->warper.srcPoints[0].y << endl;
-    cout << "TR x: " << this->warper.srcPoints[1].x << " TR y: " << this->warper.srcPoints[1].y << endl;
-    cout << "BR x: " << this->warper.srcPoints[2].x << " BR y: " << this->warper.srcPoints[2].y << endl;
-    cout << "BL x: " << this->warper.srcPoints[3].x << " BL y: " << this->warper.srcPoints[3].y << endl;
+    // cout << "TL x: " << this->warper.srcPoints[0].x << " TL y: " << this->warper.srcPoints[0].y << endl;
+    // cout << "TR x: " << this->warper.srcPoints[1].x << " TR y: " << this->warper.srcPoints[1].y << endl;
+    // cout << "BR x: " << this->warper.srcPoints[2].x << " BR y: " << this->warper.srcPoints[2].y << endl;
+    // cout << "BL x: " << this->warper.srcPoints[3].x << " BL y: " << this->warper.srcPoints[3].y << endl;
     // this->warper.setAllSrcPoints(warper.srcPoints);
 }
 
@@ -243,6 +243,10 @@ void GroundTruthEvaluator::doTheJob(bool corner){
     else{
         this->initialDiscard.setInputImage(this->inputImage);
         this->initialDiscard.doTheJob();
+        cout << "TL x: " << this->warper.srcPoints[0].x << " TL y: " << this->warper.srcPoints[0].y << endl;
+        cout << "TR x: " << this->warper.srcPoints[1].x << " TR y: " << this->warper.srcPoints[1].y << endl;
+        cout << "BR x: " << this->warper.srcPoints[2].x << " BR y: " << this->warper.srcPoints[2].y << endl;
+        cout << "BL x: " << this->warper.srcPoints[3].x << " BL y: " << this->warper.srcPoints[3].y << endl;
 
         this->warper.setInputImage(this->initialDiscard.getResult());
 
