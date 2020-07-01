@@ -12,7 +12,7 @@ private:
     cv::Point2f topRightSrcPoint;
     cv::Point2f bottomRightSrcPoint;
     cv::Point2f bottomLeftSrcPoint;
-    cv::Point2f srcPoints[4];
+ 
 
     cv::Point2f topLeftDstPoint;
     cv::Point2f topRightDstPoint;
@@ -25,6 +25,7 @@ private:
     
 
 public:
+    cv::Point2f srcPoints[4];
     Warper();
     Warper(cv::Point2f topLeftSrcPoint, cv::Point2f topRightSrcPoint,
            cv::Point2f bottomRightSrcPoint, cv::Point2f bottomLeftSrcPoint);
@@ -47,5 +48,6 @@ public:
     void saveResultAsImage(std::string imagePath);
     void saveInputImage(std::string imagePath);
     cv::Mat getResult();
+
 
 };

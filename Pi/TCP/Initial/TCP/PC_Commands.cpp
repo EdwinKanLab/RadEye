@@ -172,7 +172,23 @@ void setup(){
     if (!Camera.open()) {cerr<<"Error opening the camera"<<endl;}
     //////////////////////////////////////////////////////////////////////////
     sleep(5);
-    applyCroppers();
+    Camera.grab();
+    Camera.retrieve(image);
+    Camera.release();
+
+    initialDiscard.setInputImage(image);
+    initialDiscard.doTheJob();
+
+    topLeftRegion.setInputImage(initialDiscard.getResult());
+    topRightRegion.setInputImage(initialDiscard.getResult());
+    bottomRightRegion.setInputImage(initialDiscard.getResult());
+    bottomLeftRegion.setInputImage(initialDiscard.getResult());
+    
+    topLeftRegion.doTheJob();
+    topRightRegion.doTheJob();
+    bottomRightRegion.doTheJob();
+    bottomLeftRegion.doTheJob();
+    
     warper.setTopLeftSrcPoint(getCorner(topLeftRegion));
     warper.setTopRightSrcPoint(getCorner(topRightRegion));    
     warper.setBottomRightSrcPoint(getCorner(bottomRightRegion));
@@ -219,7 +235,7 @@ string getCoordinate(int i){
         Camera.grab();
         Camera.retrieve (image);
         groundTruthEvaluator.setInputImage(image);
-        groundTruthEvaluator.doTheJob();
+        groundTruthEvaluator.doTheJob(false);
         numTries++;
     }
 
