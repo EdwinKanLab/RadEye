@@ -14,6 +14,7 @@ using namespace std;
 int main()
 {
     //	Create a socket
+    //cout << "running" << endl;
     setup();
     int sock = socket(AF_INET, SOCK_STREAM, 0);
     if (sock == -1)
@@ -23,7 +24,7 @@ int main()
 
     //	Create a hint structure for the server we're connecting with
     int port = 7777;
-    string ipAddress = "10.49.7.249";
+    string ipAddress = "10.49.87.3";
 
     sockaddr_in hint;
     hint.sin_family = AF_INET;
